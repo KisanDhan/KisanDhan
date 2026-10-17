@@ -26,13 +26,28 @@ const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 app.use(express.json({ limit: '25mb' }));
 
 // File-backed persistent storage for bookings & settings
-const DATA_DIR = path.resolve(__dirname, 'data');
+// On serverless environments like Vercel, the filesystem outside /tmp is read-only
+const DATA_DIR = process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME
+  ? path.resolve('/tmp', 'data')
+  : path.resolve(__dirname, 'data');
 const BOOKINGS_FILE = path.resolve(DATA_DIR, 'bookings.json');
 const CONFIG_FILE = path.resolve(DATA_DIR, 'config.json');
 
-if (!fs.existsSync(DATA_DIR)) {
-  fs.mkdirSync(DATA_DIR, { recursive: true });
+try {
+  if (!fs.existsSync(DATA_DIR)) {
+    fs.mkdirSync(DATA_DIR, { recursive: true });
+  }
+} catch (err) {
+  console.warn('Could not create data directory:', err);
 }
+
+// Normalize request URL for serverless rewrites so all routes match
+app.use((req, _res, next) => {
+  if (req.url && !req.url.startsWith('/api') && req.url !== '/') {
+    req.url = '/api' + (req.url.startsWith('/') ? req.url : '/' + req.url);
+  }
+  next();
+});
 
 function loadConfig(): { nasaFirmsMapKey?: string } {
   try {
@@ -783,4 +798,8 @@ async function startServer() {
   });
 }
 
-startServer();
+if (!process.env.VERCEL && !process.env.AWS_LAMBDA_FUNCTION_NAME) {
+  startServer();
+}
+
+export default app;
