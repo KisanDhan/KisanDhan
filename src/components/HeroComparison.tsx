@@ -20,7 +20,7 @@ export const HeroComparison: React.FC<HeroComparisonProps> = ({
   const netAdvantage = calculation.netIncome + totalBurnLoss;
 
   return (
-    <section className="bg-gradient-to-b from-stone-100 to-white border border-stone-200 rounded-3xl p-5 sm:p-7 shadow-sm">
+    <section className="bg-gradient-to-b from-emerald-100 to-emerald-50 border border-emerald-200 rounded-3xl p-5 sm:p-7 shadow-sm">
       {/* Section Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
         <div>
@@ -28,14 +28,14 @@ export const HeroComparison: React.FC<HeroComparisonProps> = ({
             <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
             <span>Economic Decision Matrix</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-emerald-900 tracking-tight">
             {language === 'pa'
               ? 'ਪਰਾਲੀ ਵੇਚੋ ਬਨਾਮ ਸਾੜੋ: ਆਰਥਿਕ ਮੁਕਾਬਲਾ'
               : language === 'hi'
               ? 'पराली बेचें बनाम जलाएं: आर्थिक तुलना'
               : 'Sell vs. Burn: The Economic Comparison'}
           </h2>
-          <p className="text-sm text-stone-600 mt-1">
+          <p className="text-sm text-emerald-600 mt-1">
             {language === 'pa'
               ? `${calculation.acres} ਏਕੜ ${cropInfo.name[language]} ਲਈ ਸਿੱਧਾ ਹਿਸਾਬ ਕਿਤਾਬ`
               : language === 'hi'
@@ -44,10 +44,10 @@ export const HeroComparison: React.FC<HeroComparisonProps> = ({
           </p>
         </div>
 
-        <div className="flex items-center gap-2 self-start sm:self-auto bg-stone-50 border border-stone-200 px-3.5 py-2 rounded-xl text-xs">
-          <span className="text-stone-500 font-medium">Yield:</span>
-          <span className="font-bold text-stone-900">{calculation.stubbleQuantityQuintals} Quintals</span>
-          <span className="text-stone-300">|</span>
+        <div className="flex items-center gap-2 self-start sm:self-auto bg-emerald-50 border border-emerald-200 px-3.5 py-2 rounded-xl text-xs">
+          <span className="text-emerald-500 font-medium">Yield:</span>
+          <span className="font-bold text-emerald-900">{calculation.stubbleQuantityQuintals} Quintals</span>
+          <span className="text-emerald-300">|</span>
           <span className="font-bold text-emerald-700">{calculation.stubbleQuantityTonnes} Tonnes</span>
         </div>
       </div>
@@ -55,7 +55,7 @@ export const HeroComparison: React.FC<HeroComparisonProps> = ({
       {/* Side-by-Side Hero Cards */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6">
         {/* OPTION 1: SELL PARALI (WINNER) */}
-        <div className="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-emerald-800 to-green-950 text-white rounded-2xl p-6 sm:p-7 shadow-lg border-2 border-emerald-500 flex flex-col justify-between">
+        <div className="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-950 text-emerald-50 rounded-2xl p-6 sm:p-7 shadow-lg border-2 border-emerald-500 flex flex-col justify-between">
           <div className="absolute top-0 right-0 transform translate-x-4 -translate-y-4 w-32 h-32 bg-emerald-500/20 rounded-full blur-2xl pointer-events-none"></div>
 
           <div>
@@ -73,7 +73,7 @@ export const HeroComparison: React.FC<HeroComparisonProps> = ({
               {t.netEarned}
             </p>
             <div className="flex items-baseline gap-2 my-2">
-              <span className="text-4xl sm:text-5xl font-black tracking-tight text-white">
+              <span className="text-4xl sm:text-5xl font-emerald-950 tracking-tight text-emerald-50">
                 +₹{calculation.netIncome.toLocaleString('en-IN')}
               </span>
               <span className="text-emerald-300 text-sm font-medium">
@@ -142,7 +142,7 @@ export const HeroComparison: React.FC<HeroComparisonProps> = ({
             </span>
             <button
               onClick={onBookPickup}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-emerald-950 hover:bg-emerald-100 font-extrabold text-sm px-5 py-2.5 rounded-xl shadow-md transition active:scale-95 cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-50 text-emerald-950 hover:bg-emerald-100 font-extrabold text-sm px-5 py-2.5 rounded-xl shadow-md transition active:scale-95 cursor-pointer"
             >
               <span>{t.bookPickup}</span>
               <ArrowRight className="w-4 h-4 text-emerald-900" />
@@ -151,30 +151,30 @@ export const HeroComparison: React.FC<HeroComparisonProps> = ({
         </div>
 
         {/* OPTION 2: BURN IN FIELD (PENALTIES & LOSSES) */}
-        <div className="relative overflow-hidden bg-gradient-to-br from-rose-950 via-stone-900 to-red-950 text-white rounded-2xl p-6 sm:p-7 shadow-lg border-2 border-rose-800/80 flex flex-col justify-between">
+        <div className="relative overflow-hidden bg-gradient-to-br from-emerald-950 via-emerald-900 to-emerald-950 text-emerald-50 rounded-2xl p-6 sm:p-7 shadow-lg border-2 border-emerald-800/80 flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between mb-4">
-              <span className="inline-flex items-center gap-1.5 bg-rose-500/20 text-rose-300 text-xs font-bold px-3 py-1 rounded-full border border-rose-500/30">
-                <AlertOctagon className="w-4 h-4 text-rose-400" />
+              <span className="inline-flex items-center gap-1.5 bg-emerald-500/20 text-emerald-300 text-xs font-bold px-3 py-1 rounded-full border border-emerald-500/30">
+                <AlertOctagon className="w-4 h-4 text-emerald-400" />
                 {language === 'pa' ? 'ਨੁਕਸਾਨ ਅਤੇ ਜੁਰਮਾਨਾ' : language === 'hi' ? 'घाटा एवं कानूनी कार्रवाई' : 'FINANCIAL LOSS & RISKS'}
               </span>
-              <span className="text-xs text-rose-300 font-semibold bg-rose-900/50 px-2.5 py-1 rounded-md border border-rose-800">
+              <span className="text-xs text-emerald-300 font-semibold bg-emerald-900/50 px-2.5 py-1 rounded-md border border-emerald-800">
                 {language === 'pa' ? 'ਸੈਟੇਲਾਈਟ ਨਿਗਰਾਨੀ' : language === 'hi' ? 'उपग्रह सैटेलाइट चालान' : 'FIRMS Satellite Monitored'}
               </span>
             </div>
 
-            <p className="text-rose-300 text-sm font-semibold uppercase tracking-wider">
+            <p className="text-emerald-300 text-sm font-semibold uppercase tracking-wider">
               {language === 'pa' ? 'ਪਰਾਲੀ ਸਾੜਨ ਤੇ ਕਮਾਈ' : language === 'hi' ? 'जलाने पर आय' : 'Income from Burning'}
             </p>
             <div className="flex items-baseline gap-2 my-2">
-              <span className="text-4xl sm:text-5xl font-black tracking-tight text-stone-300">
+              <span className="text-4xl sm:text-5xl font-emerald-950 tracking-tight text-emerald-300">
                 ₹0
               </span>
-              <span className="text-rose-400 text-xs font-semibold uppercase">
+              <span className="text-emerald-400 text-xs font-semibold uppercase">
                 {language === 'pa' ? '+ ਮੋਟਾ ਜੁਰਮਾਨਾ' : language === 'hi' ? '+ भारी जुर्माना' : '+ Penalties & Soil Destruction'}
               </span>
             </div>
-            <p className="text-xs text-rose-300/80 mb-5">
+            <p className="text-xs text-emerald-300/80 mb-5">
               {language === 'pa'
                 ? `ਅੱਗ ਲਾਉਣਾ ਮੁਫ਼ਤ ਲੱਗਦਾ ਹੈ, ਪਰ ਕਿਸਾਨ ਦਾ ਕੁੱਲ ਨੁਕਸਾਨ ਲਗਭਗ ₹${totalBurnLoss.toLocaleString('en-IN')} ਹੁੰਦਾ ਹੈ`
                 : language === 'hi'
@@ -183,14 +183,14 @@ export const HeroComparison: React.FC<HeroComparisonProps> = ({
             </p>
 
             {/* Breakdown of Burning Losses */}
-            <div className="space-y-2.5 bg-rose-950/40 p-4 rounded-xl border border-rose-800/40 text-xs sm:text-sm">
+            <div className="space-y-2.5 bg-emerald-950/40 p-4 rounded-xl border border-emerald-800/40 text-xs sm:text-sm">
               <div className="flex items-start gap-2">
-                <XCircle className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
-                <span className="text-rose-100">
+                <XCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <span className="text-emerald-100">
                   <strong>
                     {language === 'pa' ? 'ਸਰਕਾਰੀ ਜੁਰਮਾਨਾ (NGT Fine):' : language === 'hi' ? 'सरकारी जुर्माना (NGT):' : 'Legal Fine (NGT Order):'}
                   </strong>{' '}
-                  <span className="text-rose-300 font-bold">
+                  <span className="text-emerald-300 font-bold">
                     -₹{calculation.burningFine.toLocaleString('en-IN')}
                   </span>{' '}
                   ({language === 'pa'
@@ -201,12 +201,12 @@ export const HeroComparison: React.FC<HeroComparisonProps> = ({
                 </span>
               </div>
               <div className="flex items-start gap-2">
-                <XCircle className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
-                <span className="text-rose-100">
+                <XCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <span className="text-emerald-100">
                   <strong>
                     {language === 'pa' ? 'ਜ਼ਮੀਨ ਦੀ ਖਾਦ ਦਾ ਨੁਕਸਾਨ:' : language === 'hi' ? 'मिट्टी के उर्वरक का नाश:' : 'Fertilizer Nutrient Loss:'}
                   </strong>{' '}
-                  <span className="text-rose-300 font-bold">
+                  <span className="text-emerald-300 font-bold">
                     -₹{calculation.soilNutrientLossRupees.toLocaleString('en-IN')}
                   </span>{' '}
                   ({language === 'pa'
@@ -217,8 +217,8 @@ export const HeroComparison: React.FC<HeroComparisonProps> = ({
                 </span>
               </div>
               <div className="flex items-start gap-2">
-                <ShieldAlert className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
-                <span className="text-rose-100">
+                <ShieldAlert className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <span className="text-emerald-100">
                   <strong>
                     {language === 'pa' ? 'ਲਾਲ ਐਂਟਰੀ ਤੇ ਪੁਲਿਸ ਕੇਸ:' : language === 'hi' ? 'जमीन रिकॉर्ड में रेड एंट्री:' : 'Red Entry in Revenue Record:'}
                   </strong>{' '}
@@ -232,11 +232,11 @@ export const HeroComparison: React.FC<HeroComparisonProps> = ({
             </div>
           </div>
 
-          <div className="mt-6 pt-4 border-t border-rose-800/50 flex items-center justify-between">
-            <span className="text-xs text-rose-300 font-medium">
+          <div className="mt-6 pt-4 border-t border-emerald-800/50 flex items-center justify-between">
+            <span className="text-xs text-emerald-300 font-medium">
               {language === 'pa' ? 'ਕੁੱਲ ਨੁਕਸਾਨ (ਜੁਰਮਾਨਾ + ਖਾਦ):' : language === 'hi' ? 'कुल वास्तविक नुकसान:' : 'Total Hidden Cost of Burning:'}
             </span>
-            <span className="text-base font-black text-rose-300">
+            <span className="text-base font-emerald-950 text-emerald-300">
               -₹{totalBurnLoss.toLocaleString('en-IN')}
             </span>
           </div>
@@ -244,20 +244,20 @@ export const HeroComparison: React.FC<HeroComparisonProps> = ({
       </div>
 
       {/* Hero Bottom Banner - Net Difference */}
-      <div className="mt-6 bg-amber-500/10 border-2 border-amber-500/40 rounded-2xl p-4 sm:p-5 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="mt-6 bg-emerald-500/10 border-2 border-emerald-500/40 rounded-2xl p-4 sm:p-5 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-3.5">
-          <div className="w-12 h-12 rounded-xl bg-amber-500 text-stone-950 flex items-center justify-center shrink-0 font-black text-xl shadow-sm">
+          <div className="w-12 h-12 rounded-xl bg-emerald-500 text-emerald-950 flex items-center justify-center shrink-0 font-emerald-950 text-xl shadow-sm">
             <TrendingUp className="w-6 h-6 stroke-[2.5]" />
           </div>
           <div>
-            <h3 className="text-base sm:text-lg font-black text-stone-900">
+            <h3 className="text-base sm:text-lg font-emerald-950 text-emerald-900">
               {language === 'pa'
                 ? `ਪਰਾਲੀ ਨਾ ਸਾੜਨ ਨਾਲ ਕੁੱਲ ₹${netAdvantage.toLocaleString('en-IN')} ਦਾ ਸਿੱਧਾ ਫਾਇਦਾ!`
                 : language === 'hi'
                 ? `पराली न जलाने पर किसान को कुल ₹${netAdvantage.toLocaleString('en-IN')} का शुद्ध लाभ!`
                 : `Total Farmer Advantage: +₹${netAdvantage.toLocaleString('en-IN')} by Selling!`}
             </h3>
-            <p className="text-xs sm:text-sm text-stone-600">
+            <p className="text-xs sm:text-sm text-emerald-600">
               {language === 'pa'
                 ? `(₹${calculation.netIncome.toLocaleString('en-IN')} ਹੱਥ ਵਿੱਚ ਕਮਾਈ + ₹${totalBurnLoss.toLocaleString('en-IN')} ਜੁਰਮਾਨੇ ਅਤੇ ਜ਼ਮੀਨ ਦੇ ਨੁਕਸਾਨ ਤੋਂ ਬਚਾਅ)`
                 : language === 'hi'
@@ -269,7 +269,7 @@ export const HeroComparison: React.FC<HeroComparisonProps> = ({
 
         <button
           onClick={onBookPickup}
-          className="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-sm px-6 py-3 rounded-xl shadow-md transition active:scale-95 shrink-0 cursor-pointer"
+          className="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-emerald-50 font-bold text-sm px-6 py-3 rounded-xl shadow-md transition active:scale-95 shrink-0 cursor-pointer"
         >
           <CalendarCheck className="w-4 h-4" />
           <span>{language === 'pa' ? 'ਅੱਜ ਹੀ ਚੁਕਾਈ ਬੁੱਕ ਕਰੋ' : language === 'hi' ? 'आज ही पिकअप बुक करें' : 'Schedule Stubble Baler Pickup'}</span>

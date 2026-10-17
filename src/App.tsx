@@ -549,33 +549,33 @@ export default function App() {
     {
       title: i18n.actionSellTitle,
       subtitle: i18n.actionSellSub,
-      icon: <TrendingUp className="w-5 h-5 text-amber-400" />,
+      icon: <TrendingUp className="w-5 h-5 text-emerald-400" />,
       onClick: () => handleSendMessage(i18n.querySell),
     },
     {
       title: i18n.actionBuyersTitle,
       subtitle: i18n.actionBuyersSub,
-      icon: <Factory className="w-5 h-5 text-sky-400" />,
+      icon: <Factory className="w-5 h-5 text-emerald-400" />,
       onClick: () => handleSendMessage(i18n.queryBuyers),
     },
     {
       title: i18n.actionMapTitle,
       subtitle: i18n.actionMapSub,
-      icon: <Flame className="w-5 h-5 text-rose-400" />,
+      icon: <Flame className="w-5 h-5 text-emerald-400" />,
       onClick: () => setIsFullMapOpen(true),
     },
   ];
 
   return (
-    <div className="flex flex-col h-[100dvh] w-screen bg-[#131314] text-stone-100 font-sans select-none overflow-hidden">
+    <div className="flex flex-col h-[100dvh] w-screen bg-[#052e16] text-emerald-100 font-sans select-none overflow-hidden">
       {/* 1. TOP HEADER: STRICT COMPLIANCE -> ONLY LOGO, NAME, AND PROFILE PICTURE */}
-      <header className="h-14 px-4 flex items-center justify-between border-b border-[#282a2c] bg-[#131314] shrink-0 z-20">
+      <header className="h-14 px-4 flex items-center justify-between border-b border-[#047857] bg-[#052e16] shrink-0 z-20">
         {/* Left: App Logo & Name */}
         <div className="flex items-center gap-2">
           {messages.length > 0 && (
             <button
               onClick={() => setMessages([])}
-              className="flex items-center gap-1 bg-[#1e1f20] hover:bg-[#282a2c] text-stone-300 hover:text-white px-2 py-1 rounded-xl text-xs font-bold transition active:scale-95 cursor-pointer mr-0.5 border border-[#2e3134]"
+              className="flex items-center gap-1 bg-[#065f46] hover:bg-[#047857] text-emerald-300 hover:text-emerald-50 px-2 py-1 rounded-xl text-xs font-bold transition active:scale-95 cursor-pointer mr-0.5 border border-[#059669]"
               title="Return to Home"
             >
               <ArrowLeft className="w-3.5 h-3.5 text-emerald-400" />
@@ -583,14 +583,14 @@ export default function App() {
             </button>
           )}
 
-          <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center shadow-md">
-            <Sprout className="w-4 h-4 text-stone-950 font-bold" />
+          <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center shadow-md">
+            <Sprout className="w-4 h-4 text-emerald-950 font-bold" />
           </div>
           <div className="flex items-center gap-1.5">
-            <span className="font-extrabold text-base tracking-tight text-white">
+            <span className="font-extrabold text-base tracking-tight text-emerald-50">
               {i18n.appName}
             </span>
-            <span className="text-[9px] font-black bg-amber-500/20 text-amber-300 border border-amber-500/40 px-1.5 py-0.5 rounded tracking-wider uppercase">
+            <span className="text-[9px] font-emerald-950 bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-1.5 py-0.5 rounded tracking-wider uppercase">
               {i18n.appSubName}
             </span>
           </div>
@@ -600,11 +600,11 @@ export default function App() {
         <div className="flex items-center gap-2">
           <button
             onClick={() => setIsProfileDrawerOpen(true)}
-            className="relative w-9 h-9 rounded-full bg-gradient-to-br from-amber-500 to-amber-700 text-stone-950 font-black text-xs flex items-center justify-center ring-2 ring-emerald-500/50 shadow-md active:scale-95 transition cursor-pointer"
+            className="relative w-9 h-9 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-700 text-emerald-950 font-emerald-950 text-xs flex items-center justify-center ring-2 ring-emerald-500/50 shadow-md active:scale-95 transition cursor-pointer"
             title="Farmer Profile, Language Switcher & Settings"
           >
             <span>GS</span>
-            <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-400 rounded-full border-2 border-[#131314]"></span>
+            <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-400 rounded-full border-2 border-[#052e16]"></span>
           </button>
         </div>
       </header>
@@ -623,17 +623,17 @@ export default function App() {
             {/* Top Greeting Block */}
             <div className="space-y-2">
               <div>
-                <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-300 bg-clip-text text-transparent">
+                <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight bg-gradient-to-r from-emerald-400 via-emerald-300 to-emerald-300 bg-clip-text text-transparent">
                   {i18n.greeting}
                 </h1>
-                <p className="text-xs sm:text-sm text-stone-400 mt-0.5 font-medium leading-relaxed">
+                <p className="text-xs sm:text-sm text-emerald-400 mt-0.5 font-medium leading-relaxed">
                   {i18n.tagline}
                 </p>
               </div>
 
               {/* Land Acreage Selector */}
               <div className="flex items-center gap-1.5 flex-wrap pt-0.5">
-                <span className="text-[11px] font-semibold text-stone-400">
+                <span className="text-[11px] font-semibold text-emerald-400">
                   {i18n.selectLand}
                 </span>
                 {[4, 8, 12, 16].map((a) => (
@@ -642,26 +642,26 @@ export default function App() {
                     onClick={() => setAcres(a)}
                     className={`text-xs px-2.5 py-0.5 rounded-lg font-bold border transition cursor-pointer ${
                       acres === a
-                        ? 'bg-emerald-500 text-stone-950 border-emerald-400 shadow-xs'
-                        : 'bg-[#1e1f20] text-stone-300 border-[#2e3134] hover:bg-[#282a2c]'
+                        ? 'bg-emerald-500 text-emerald-950 border-emerald-400 shadow-xs'
+                        : 'bg-[#065f46] text-emerald-300 border-[#059669] hover:bg-[#047857]'
                     }`}
                   >
                     {a} {i18n.acreUnit}
                   </button>
                 ))}
-                <span className="text-[11px] text-stone-500 ml-1">• {village}, {district}</span>
+                <span className="text-[11px] text-emerald-500 ml-1">• {village}, {district}</span>
               </div>
 
               {/* Live Weather & AQI Pill */}
               {liveWeather && (
-                <div className="flex items-center gap-2 bg-[#1e1f20] border border-[#2e3134] px-3 py-1 rounded-full text-[11px] text-stone-300 w-fit">
-                  <span className="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+                <div className="flex items-center gap-2 bg-[#065f46] border border-[#059669] px-3 py-1 rounded-full text-[11px] text-emerald-300 w-fit">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                   <span>
-                    {i18n.liveDelhiAQI} <strong className="text-white">{liveWeather.delhiPm25} µg/m³</strong> ({liveWeather.delhiAqiCategory})
+                    {i18n.liveDelhiAQI} <strong className="text-emerald-50">{liveWeather.delhiPm25} µg/m³</strong> ({liveWeather.delhiAqiCategory})
                   </span>
-                  <span className="text-stone-500">•</span>
+                  <span className="text-emerald-500">•</span>
                   <span>
-                    {i18n.windLabel} <strong className="text-white">{liveWeather.windSpeedKmh} {i18n.windNW}</strong>
+                    {i18n.windLabel} <strong className="text-emerald-50">{liveWeather.windSpeedKmh} {i18n.windNW}</strong>
                   </span>
                 </div>
               )}
@@ -675,21 +675,21 @@ export default function App() {
                   onClick={item.onClick}
                   className={`p-3 rounded-2xl text-left transition flex flex-col justify-between h-24 sm:h-26 border active:scale-[0.98] cursor-pointer ${
                     item.highlight
-                      ? 'bg-gradient-to-br from-emerald-950/70 to-[#1e1f20] border-emerald-500/60 shadow-sm'
-                      : 'bg-[#1e1f20] hover:bg-[#282a2c] border-[#2e3134]'
+                      ? 'bg-gradient-to-br from-emerald-950/70 to-[#065f46] border-emerald-500/60 shadow-sm'
+                      : 'bg-[#065f46] hover:bg-[#047857] border-[#059669]'
                   }`}
                 >
                   <div className="flex items-center justify-between">
-                    <span className="p-1.5 rounded-xl bg-[#131314]/80 border border-[#2e3134]">
+                    <span className="p-1.5 rounded-xl bg-[#052e16]/80 border border-[#059669]">
                       {item.icon}
                     </span>
-                    <ArrowRight className="w-3.5 h-3.5 text-stone-500" />
+                    <ArrowRight className="w-3.5 h-3.5 text-emerald-500" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-xs sm:text-sm text-white">
+                    <h3 className="font-bold text-xs sm:text-sm text-emerald-50">
                       {item.title}
                     </h3>
-                    <p className="text-[10px] sm:text-[11px] text-stone-400 mt-0.5 truncate">
+                    <p className="text-[10px] sm:text-[11px] text-emerald-400 mt-0.5 truncate">
                       {item.subtitle}
                     </p>
                   </div>
@@ -700,18 +700,18 @@ export default function App() {
             {/* Single-Line Live Mandi Wire Ticker */}
             <div
               onClick={() => setIsNewsDrawerOpen(true)}
-              className="bg-[#18191a] border border-[#2e3134] hover:border-sky-500/40 px-3 py-1.5 rounded-xl flex items-center justify-between text-xs cursor-pointer transition active:scale-[0.99]"
+              className="bg-[#064e3b] border border-[#059669] hover:border-emerald-500/40 px-3 py-1.5 rounded-xl flex items-center justify-between text-xs cursor-pointer transition active:scale-[0.99]"
             >
               <div className="flex items-center gap-1.5 overflow-hidden">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 shrink-0"></span>
-                <span className="text-[10px] font-bold text-sky-400 uppercase tracking-wider shrink-0">
+                <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider shrink-0">
                   Mandi Wire:
                 </span>
-                <p className="text-[11px] text-stone-300 truncate">
+                <p className="text-[11px] text-emerald-300 truncate">
                   {scrapedNews.length > 0 ? scrapedNews[0].title : 'CAQM mandates 5% biomass co-firing in thermal power plants'}
                 </p>
               </div>
-              <ChevronRight className="w-3.5 h-3.5 text-stone-500 shrink-0 ml-1.5" />
+              <ChevronRight className="w-3.5 h-3.5 text-emerald-500 shrink-0 ml-1.5" />
             </div>
           </div>
         ) : (
@@ -728,15 +728,15 @@ export default function App() {
                 <div
                   className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed ${
                     msg.role === 'user'
-                      ? 'bg-emerald-600 text-stone-950 font-bold rounded-br-xs'
+                      ? 'bg-emerald-600 text-emerald-950 font-bold rounded-br-xs'
                       : msg.cardType === 'non_crop_warning'
-                      ? 'bg-amber-950/80 border-2 border-amber-500/80 text-amber-100 rounded-bl-xs'
-                      : 'bg-[#1e1f20] border border-[#2e3134] text-stone-100 rounded-bl-xs shadow-sm'
+                      ? 'bg-emerald-950/80 border-2 border-emerald-500/80 text-emerald-100 rounded-bl-xs'
+                      : 'bg-[#065f46] border border-[#059669] text-emerald-100 rounded-bl-xs shadow-sm'
                   }`}
                 >
                   {/* Non-Crop Warning Header */}
                   {msg.cardType === 'non_crop_warning' && (
-                    <div className="flex items-center gap-1.5 text-amber-400 font-black mb-1 text-xs">
+                    <div className="flex items-center gap-1.5 text-emerald-400 font-emerald-950 mb-1 text-xs">
                       <ShieldAlert className="w-4 h-4 shrink-0" />
                       <span>{msg.detectedSubject ? `Identified: ${msg.detectedSubject}` : 'Non-Agricultural Photo'}</span>
                     </div>
@@ -746,7 +746,7 @@ export default function App() {
 
                   {/* Audio Replay Button */}
                   {msg.role === 'model' && msg.audioText && (
-                    <div className="mt-1.5 pt-1.5 border-t border-[#2e3134] flex items-center justify-between text-[11px] text-stone-400">
+                    <div className="mt-1.5 pt-1.5 border-t border-[#059669] flex items-center justify-between text-[11px] text-emerald-400">
                       <button
                         onClick={() => speakText(msg.audioText!)}
                         className="flex items-center gap-1 text-emerald-400 hover:text-emerald-300 font-semibold cursor-pointer"
@@ -754,21 +754,21 @@ export default function App() {
                         <Volume2 className="w-3.5 h-3.5" />
                         <span>Replay Voice</span>
                       </button>
-                      <span className="text-[10px] text-stone-500">{msg.timestamp}</span>
+                      <span className="text-[10px] text-emerald-500">{msg.timestamp}</span>
                     </div>
                   )}
                 </div>
 
                 {/* Sell vs Burn Financial Card */}
                 {msg.role === 'model' && msg.cardType === 'sell_vs_burn' && (
-                  <div className="w-full max-w-sm mt-2 bg-[#1c1d1f] border border-[#2e3134] rounded-2xl p-3.5 shadow-md space-y-2.5">
+                  <div className="w-full max-w-sm mt-2 bg-[#064e3b] border border-[#059669] rounded-2xl p-3.5 shadow-md space-y-2.5">
                     <div className="grid grid-cols-2 gap-2 text-xs">
                       {/* Sell Card */}
-                      <div className="bg-emerald-950/70 border border-emerald-500/70 rounded-xl p-2.5 text-white">
+                      <div className="bg-emerald-950/70 border border-emerald-500/70 rounded-xl p-2.5 text-emerald-50">
                         <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider block">
                           {i18n.sellHeader}
                         </span>
-                        <div className="text-lg font-black text-emerald-300 my-0.5">
+                        <div className="text-lg font-emerald-950 text-emerald-300 my-0.5">
                           +₹{calculation.netIncome.toLocaleString('en-IN')}
                         </div>
                         <p className="text-[10px] text-emerald-200 truncate">
@@ -777,14 +777,14 @@ export default function App() {
                       </div>
 
                       {/* Burn Card */}
-                      <div className="bg-rose-950/70 border border-rose-600/70 rounded-xl p-2.5 text-white">
-                        <span className="text-[10px] font-bold text-rose-400 uppercase tracking-wider block">
+                      <div className="bg-emerald-950/70 border border-emerald-600/70 rounded-xl p-2.5 text-emerald-50">
+                        <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider block">
                           {i18n.burnHeader}
                         </span>
-                        <div className="text-lg font-black text-rose-400 my-0.5">
+                        <div className="text-lg font-emerald-950 text-emerald-400 my-0.5">
                           ₹0 Income
                         </div>
-                        <p className="text-[10px] text-rose-300">
+                        <p className="text-[10px] text-emerald-300">
                           -₹{calculation.burningFine.toLocaleString('en-IN')} {i18n.burnFineRisk}
                         </p>
                       </div>
@@ -793,7 +793,7 @@ export default function App() {
                     {/* Book Baler CTA */}
                     <button
                       onClick={() => handleOpenPickupForBuyer(buyers[0])}
-                      className="w-full bg-emerald-600 hover:bg-emerald-500 text-stone-950 font-black py-2.5 rounded-xl text-xs flex items-center justify-center gap-1.5 transition active:scale-95 cursor-pointer shadow-md"
+                      className="w-full bg-emerald-600 hover:bg-emerald-500 text-emerald-950 font-emerald-950 py-2.5 rounded-xl text-xs flex items-center justify-center gap-1.5 transition active:scale-95 cursor-pointer shadow-md"
                     >
                       <CalendarCheck className="w-4 h-4" />
                       <span>{i18n.bookBalerBtn}</span>
@@ -803,29 +803,29 @@ export default function App() {
 
                 {/* Buyers Card */}
                 {msg.role === 'model' && msg.cardType === 'buyers' && (
-                  <div className="w-full max-w-sm mt-2 bg-[#1c1d1f] border border-[#2e3134] rounded-2xl p-3 space-y-2">
-                    <div className="flex items-center justify-between text-xs font-bold text-stone-300 border-b border-[#2e3134] pb-1.5">
+                  <div className="w-full max-w-sm mt-2 bg-[#064e3b] border border-[#059669] rounded-2xl p-3 space-y-2">
+                    <div className="flex items-center justify-between text-xs font-bold text-emerald-300 border-b border-[#059669] pb-1.5">
                       <span>Verified Biomass Buyers</span>
                       <span className="text-emerald-400">{district} Hub</span>
                     </div>
                     {buyers.slice(0, 3).map((b) => (
                       <div
                         key={b.id}
-                        className="bg-[#131314] p-2 rounded-xl border border-[#2e3134] flex items-center justify-between text-xs"
+                        className="bg-[#052e16] p-2 rounded-xl border border-[#059669] flex items-center justify-between text-xs"
                       >
                         <div>
-                          <p className="font-bold text-white text-xs">{b.name}</p>
-                          <p className="text-[10px] text-stone-400">
+                          <p className="font-bold text-emerald-50 text-xs">{b.name}</p>
+                          <p className="text-[10px] text-emerald-400">
                             {b.distanceKm} km away • {b.balerSupport ? 'Free Baler' : 'Self Transport'}
                           </p>
                         </div>
                         <div className="text-right">
-                          <p className="font-black text-emerald-400 text-xs">
+                          <p className="font-emerald-950 text-emerald-400 text-xs">
                             ₹{b.totalNetPayout?.toLocaleString('en-IN')}
                           </p>
                           <button
                             onClick={() => handleOpenPickupForBuyer(b)}
-                            className="mt-1 bg-emerald-600 hover:bg-emerald-500 text-stone-950 font-bold px-2 py-0.5 rounded text-[10px] cursor-pointer"
+                            className="mt-1 bg-emerald-600 hover:bg-emerald-500 text-emerald-950 font-bold px-2 py-0.5 rounded text-[10px] cursor-pointer"
                           >
                             {i18n.bookBtn}
                           </button>
@@ -837,19 +837,19 @@ export default function App() {
 
                 {/* Map Card */}
                 {msg.role === 'model' && msg.cardType === 'map' && (
-                  <div className="w-full max-w-sm mt-2 bg-[#1c1d1f] border border-[#2e3134] rounded-2xl p-3 space-y-2">
-                    <div className="flex items-center gap-1.5 text-rose-400 font-bold text-xs">
+                  <div className="w-full max-w-sm mt-2 bg-[#064e3b] border border-[#059669] rounded-2xl p-3 space-y-2">
+                    <div className="flex items-center gap-1.5 text-emerald-400 font-bold text-xs">
                       <Flame className="w-4 h-4" />
                       <span>{hotspots.length} {i18n.firesDetected}</span>
                     </div>
-                    <p className="text-[11px] text-stone-400">
+                    <p className="text-[11px] text-emerald-400">
                       {i18n.windHeadingDelhi}
                     </p>
                     <button
                       onClick={() => setIsFullMapOpen(true)}
-                      className="w-full bg-[#282a2c] hover:bg-[#3c4043] text-stone-100 font-bold py-2 rounded-xl text-xs flex items-center justify-center gap-1.5 transition cursor-pointer"
+                      className="w-full bg-[#047857] hover:bg-[#10b981] text-emerald-100 font-bold py-2 rounded-xl text-xs flex items-center justify-center gap-1.5 transition cursor-pointer"
                     >
-                      <MapPin className="w-3.5 h-3.5 text-rose-400" />
+                      <MapPin className="w-3.5 h-3.5 text-emerald-400" />
                       <span>{i18n.viewMapBtn}</span>
                     </button>
                   </div>
@@ -857,7 +857,7 @@ export default function App() {
 
                 {/* Grounding Sources */}
                 {msg.sources && msg.sources.length > 0 && (
-                  <div className="mt-1 text-[10px] text-stone-500 flex items-center gap-1 flex-wrap">
+                  <div className="mt-1 text-[10px] text-emerald-500 flex items-center gap-1 flex-wrap">
                     <span>{i18n.groundedInSearch}</span>
                     {msg.sources.map((s, idx) => (
                       <a
@@ -877,7 +877,7 @@ export default function App() {
             ))}
 
             {isTyping && (
-              <div className="flex items-center gap-2 bg-[#1e1f20] border border-[#2e3134] text-stone-300 px-3 py-2 rounded-2xl rounded-bl-xs w-fit text-xs">
+              <div className="flex items-center gap-2 bg-[#065f46] border border-[#059669] text-emerald-300 px-3 py-2 rounded-2xl rounded-bl-xs w-fit text-xs">
                 <Sparkles className="w-4 h-4 text-emerald-400 animate-spin" />
                 <span>{i18n.typingText}</span>
               </div>
@@ -889,24 +889,24 @@ export default function App() {
       </main>
 
       {/* 3. BOTTOM INPUT BAR: TEXT, ATTACH IMAGE/FILE, MIC, CAMERA DASHBOARD */}
-      <footer className="p-2.5 border-t border-[#282a2c] bg-[#131314] shrink-0 max-w-md w-full mx-auto">
+      <footer className="p-2.5 border-t border-[#047857] bg-[#052e16] shrink-0 max-w-md w-full mx-auto">
         {/* Attached image preview banner */}
         {attachedImage && (
-          <div className="mb-2 px-3 py-1 bg-[#1e1f20] border border-emerald-500/50 rounded-xl flex items-center justify-between text-xs text-emerald-300">
+          <div className="mb-2 px-3 py-1 bg-[#065f46] border border-emerald-500/50 rounded-xl flex items-center justify-between text-xs text-emerald-300">
             <div className="flex items-center gap-2">
               <Camera className="w-3.5 h-3.5" />
               <span>{i18n.fileAttached}</span>
             </div>
             <button
               onClick={() => setAttachedImage(null)}
-              className="p-1 hover:text-white cursor-pointer"
+              className="p-1 hover:text-emerald-50 cursor-pointer"
             >
               <X className="w-3.5 h-3.5" />
             </button>
           </div>
         )}
 
-        <div className="flex items-center gap-1 bg-[#1e1f20] border border-[#2e3134] focus-within:border-emerald-500/80 rounded-2xl px-2 py-1 transition">
+        <div className="flex items-center gap-1 bg-[#065f46] border border-[#059669] focus-within:border-emerald-500/80 rounded-2xl px-2 py-1 transition">
           {/* File input (hidden) */}
           <input
             type="file"
@@ -928,7 +928,7 @@ export default function App() {
           {/* Attach Button */}
           <button
             onClick={() => fileInputRef.current?.click()}
-            className="p-2 text-stone-400 hover:text-stone-200 transition rounded-xl cursor-pointer"
+            className="p-2 text-emerald-400 hover:text-emerald-200 transition rounded-xl cursor-pointer"
             title="Attach Field Photo or Report"
           >
             <Paperclip className="w-4 h-4" />
@@ -954,7 +954,7 @@ export default function App() {
               }
             }}
             placeholder={i18n.placeholder}
-            className="flex-1 bg-transparent border-none text-white text-xs sm:text-sm placeholder:text-stone-500 outline-none px-1"
+            className="flex-1 bg-transparent border-none text-emerald-50 text-xs sm:text-sm placeholder:text-emerald-500 outline-none px-1"
           />
 
           {/* Voice Input (Speech Recognition) */}
@@ -962,8 +962,8 @@ export default function App() {
             onClick={toggleVoiceInput}
             className={`p-2 rounded-xl transition cursor-pointer ${
               isListening
-                ? 'bg-rose-600 text-white animate-pulse'
-                : 'text-stone-400 hover:text-stone-200'
+                ? 'bg-emerald-600 text-emerald-50 animate-pulse'
+                : 'text-emerald-400 hover:text-emerald-200'
             }`}
             title="Push to Speak"
           >
@@ -974,7 +974,7 @@ export default function App() {
           <button
             onClick={() => handleSendMessage(inputText.trim())}
             disabled={!inputText.trim() && !attachedImage}
-            className="p-2 bg-emerald-600 hover:bg-emerald-500 disabled:bg-[#282a2c] text-stone-950 disabled:text-stone-600 rounded-xl font-bold transition active:scale-95 cursor-pointer disabled:cursor-not-allowed"
+            className="p-2 bg-emerald-600 hover:bg-emerald-500 disabled:bg-[#047857] text-emerald-950 disabled:text-emerald-600 rounded-xl font-bold transition active:scale-95 cursor-pointer disabled:cursor-not-allowed"
           >
             <Send className="w-4 h-4" />
           </button>
@@ -1026,18 +1026,18 @@ export default function App() {
 
       {/* 7. FULL SCREEN SATELLITE FIRE & BUYER MAP (With Guaranteed Radar & Leaflet Fallback) */}
       {isFullMapOpen && (
-        <div className="fixed inset-0 z-50 bg-[#131314] flex flex-col animate-fadeIn">
-          <div className="p-3 flex items-center justify-between border-b border-[#282a2c] bg-[#131314]">
+        <div className="fixed inset-0 z-50 bg-[#052e16] flex flex-col animate-fadeIn">
+          <div className="p-3 flex items-center justify-between border-b border-[#047857] bg-[#052e16]">
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setIsFullMapOpen(false)}
-                className="flex items-center gap-1.5 bg-[#1e1f20] hover:bg-[#282a2c] text-white px-2.5 py-1.5 rounded-xl text-xs font-bold border border-[#2e3134] transition active:scale-95 cursor-pointer"
+                className="flex items-center gap-1.5 bg-[#065f46] hover:bg-[#047857] text-emerald-50 px-2.5 py-1.5 rounded-xl text-xs font-bold border border-[#059669] transition active:scale-95 cursor-pointer"
               >
                 <ArrowLeft className="w-4 h-4 text-emerald-400" />
                 <span>{i18n.back}</span>
               </button>
-              <h2 className="text-xs sm:text-sm font-bold text-white flex items-center gap-1.5">
-                <Flame className="w-4 h-4 text-rose-500" />
+              <h2 className="text-xs sm:text-sm font-bold text-emerald-50 flex items-center gap-1.5">
+                <Flame className="w-4 h-4 text-emerald-500" />
                 <span>
                   {language === 'hr' ? 'नासा आग मैप' : language === 'pa' ? 'ਨਾਸਾ ਅੱਗ ਮੈਪ' : language === 'hi' ? 'नासा आग मैप' : 'NASA Fire Map'}
                 </span>
@@ -1046,14 +1046,14 @@ export default function App() {
             <div className="flex items-center gap-1.5">
               <button
                 onClick={() => setIsNasaKeyModalOpen(true)}
-                className="bg-[#1e1f20] hover:bg-[#282a2c] text-amber-300 border border-amber-500/40 px-2 py-1 rounded-xl text-xs font-bold flex items-center gap-1 transition cursor-pointer"
+                className="bg-[#065f46] hover:bg-[#047857] text-emerald-300 border border-emerald-500/40 px-2 py-1 rounded-xl text-xs font-bold flex items-center gap-1 transition cursor-pointer"
               >
-                <Key className="w-3.5 h-3.5 text-amber-400" />
+                <Key className="w-3.5 h-3.5 text-emerald-400" />
                 <span>NASA Key</span>
               </button>
               <button
                 onClick={() => setIsFullMapOpen(false)}
-                className="p-1.5 rounded-full bg-[#1e1f20] text-stone-300 hover:text-white cursor-pointer border border-[#2e3134]"
+                className="p-1.5 rounded-full bg-[#065f46] text-emerald-300 hover:text-emerald-50 cursor-pointer border border-[#059669]"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -1081,35 +1081,35 @@ export default function App() {
 
       {/* 9. REAL-TIME SCRAPED INDIAN AGRI WIRE DRAWER */}
       {isNewsDrawerOpen && (
-        <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-xs flex justify-end animate-fadeIn">
-          <div className="w-full max-w-sm bg-[#1c1d1f] border-l border-[#2e3134] text-white h-full p-4 shadow-2xl flex flex-col justify-between overflow-y-auto">
+        <div className="fixed inset-0 z-50 bg-emerald-950/70 backdrop-blur-xs flex justify-end animate-fadeIn">
+          <div className="w-full max-w-sm bg-[#064e3b] border-l border-[#059669] text-emerald-50 h-full p-4 shadow-2xl flex flex-col justify-between overflow-y-auto">
             <div>
-              <div className="flex items-center justify-between pb-3 border-b border-[#2e3134]">
+              <div className="flex items-center justify-between pb-3 border-b border-[#059669]">
                 <button
                   onClick={() => setIsNewsDrawerOpen(false)}
-                  className="flex items-center gap-1.5 text-stone-200 bg-[#282a2c] hover:bg-[#3c4043] px-2.5 py-1 rounded-xl text-xs font-bold transition cursor-pointer"
+                  className="flex items-center gap-1.5 text-emerald-200 bg-[#047857] hover:bg-[#10b981] px-2.5 py-1 rounded-xl text-xs font-bold transition cursor-pointer"
                 >
-                  <ArrowLeft className="w-3.5 h-3.5 text-sky-400" />
+                  <ArrowLeft className="w-3.5 h-3.5 text-emerald-400" />
                   <span>{i18n.back}</span>
                 </button>
-                <span className="text-xs font-bold uppercase tracking-wider text-stone-400 flex items-center gap-1.5">
-                  <Newspaper className="w-4 h-4 text-sky-400" />
+                <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
+                  <Newspaper className="w-4 h-4 text-emerald-400" />
                   Live Mandi Wire
                 </span>
                 <button
                   onClick={() => setIsNewsDrawerOpen(false)}
-                  className="p-1 rounded-full hover:bg-[#282a2c] text-stone-400 cursor-pointer"
+                  className="p-1 rounded-full hover:bg-[#047857] text-emerald-400 cursor-pointer"
                 >
                   <X className="w-4 h-4" />
                 </button>
               </div>
 
               <div className="mt-3 space-y-2.5">
-                <div className="bg-sky-950/40 border border-sky-600/40 rounded-xl p-3 text-xs text-sky-200">
-                  <p className="font-bold text-white text-xs mb-1">
+                <div className="bg-emerald-950/40 border border-emerald-600/40 rounded-xl p-3 text-xs text-emerald-200">
+                  <p className="font-bold text-emerald-50 text-xs mb-1">
                     {i18n.newsFeedTitle}
                   </p>
-                  <p className="text-[11px] text-sky-200/80 leading-relaxed">
+                  <p className="text-[11px] text-emerald-200/80 leading-relaxed">
                     Direct news scraping from Indian agricultural authorities, CAQM, NTPC, and Punjab/Haryana Mandi Boards.
                   </p>
                 </div>
@@ -1118,19 +1118,19 @@ export default function App() {
                   {scrapedNews.map((n, idx) => (
                     <div
                       key={idx}
-                      className="bg-[#131314] border border-[#2e3134] rounded-xl p-2.5 text-xs space-y-1 hover:border-sky-500/40 transition"
+                      className="bg-[#052e16] border border-[#059669] rounded-xl p-2.5 text-xs space-y-1 hover:border-emerald-500/40 transition"
                     >
-                      <h4 className="font-semibold text-white text-xs leading-snug">
+                      <h4 className="font-semibold text-emerald-50 text-xs leading-snug">
                         {n.title}
                       </h4>
-                      <div className="flex items-center justify-between text-[10px] text-stone-400 pt-1">
+                      <div className="flex items-center justify-between text-[10px] text-emerald-400 pt-1">
                         <span>{n.timeAgo}</span>
                         {n.link && (
                           <a
                             href={n.link}
                             target="_blank"
                             rel="noreferrer"
-                            className="text-sky-400 hover:underline flex items-center gap-1"
+                            className="text-emerald-400 hover:underline flex items-center gap-1"
                           >
                             <span>Read Source</span>
                             <ExternalLink className="w-3 h-3" />
@@ -1143,10 +1143,10 @@ export default function App() {
               </div>
             </div>
 
-            <div className="pt-3 border-t border-[#2e3134]">
+            <div className="pt-3 border-t border-[#059669]">
               <button
                 onClick={() => setIsNewsDrawerOpen(false)}
-                className="w-full bg-[#282a2c] hover:bg-[#3c4043] text-stone-200 font-bold py-2 rounded-xl text-xs transition cursor-pointer"
+                className="w-full bg-[#047857] hover:bg-[#10b981] text-emerald-200 font-bold py-2 rounded-xl text-xs transition cursor-pointer"
               >
                 Close Wire
               </button>

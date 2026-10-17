@@ -219,13 +219,13 @@ export const PickupSchedulerModal: React.FC<PickupSchedulerModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-stone-950/70 backdrop-blur-xs overflow-y-auto animate-fadeIn">
-      <div className="relative bg-[#1c1d1f] text-white rounded-3xl max-w-lg w-full p-5 sm:p-7 shadow-2xl border border-[#2e3134] my-6 max-h-[90vh] overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-emerald-950/70 backdrop-blur-xs overflow-y-auto animate-fadeIn">
+      <div className="relative bg-[#064e3b] text-emerald-50 rounded-3xl max-w-lg w-full p-5 sm:p-7 shadow-2xl border border-[#059669] my-6 max-h-[90vh] overflow-y-auto">
         {/* Top Navigation Row */}
-        <div className="flex items-center justify-between mb-4 pb-2 border-b border-[#2e3134]">
+        <div className="flex items-center justify-between mb-4 pb-2 border-b border-[#059669]">
           <button
             onClick={onClose}
-            className="flex items-center gap-1.5 text-stone-200 hover:text-white bg-[#282a2c] hover:bg-[#3c4043] px-3 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer"
+            className="flex items-center gap-1.5 text-emerald-200 hover:text-emerald-50 bg-[#047857] hover:bg-[#10b981] px-3 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer"
           >
             <ArrowLeft className="w-4 h-4 text-emerald-400" />
             <span>{i18n.backBtn}</span>
@@ -233,7 +233,7 @@ export const PickupSchedulerModal: React.FC<PickupSchedulerModalProps> = ({
 
           <button
             onClick={onClose}
-            className="p-1.5 text-stone-400 hover:text-white rounded-full hover:bg-[#282a2c] transition cursor-pointer"
+            className="p-1.5 text-emerald-400 hover:text-emerald-50 rounded-full hover:bg-[#047857] transition cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
@@ -247,31 +247,31 @@ export const PickupSchedulerModal: React.FC<PickupSchedulerModalProps> = ({
                 <Truck className="w-3.5 h-3.5" />
                 <span>{i18n.windowBadge}</span>
               </span>
-              <h2 className="text-xl sm:text-2xl font-black text-white">
+              <h2 className="text-xl sm:text-2xl font-emerald-950 text-emerald-50">
                 {i18n.title}
               </h2>
-              <p className="text-xs sm:text-sm text-stone-400 mt-1">
+              <p className="text-xs sm:text-sm text-emerald-400 mt-1">
                 {i18n.subtitle}
               </p>
             </div>
 
             {/* Selected Buyer & Deal Recap */}
-            <div className="bg-[#131314] border border-[#2e3134] rounded-2xl p-4 mb-5 flex items-center justify-between">
+            <div className="bg-[#052e16] border border-[#059669] rounded-2xl p-4 mb-5 flex items-center justify-between">
               <div>
                 <p className="text-xs text-emerald-400 font-semibold">
                   {i18n.assignedBuyer}
                 </p>
-                <p className="text-sm font-black text-white">
+                <p className="text-sm font-emerald-950 text-emerald-50">
                   {buyer?.name || 'Punjab Biomass Power Plant Ltd.'}
                 </p>
-                <p className="text-xs text-stone-400 mt-0.5">
+                <p className="text-xs text-emerald-400 mt-0.5">
                   {quantityQuintals} {language === 'pa' ? 'ਕੁਇੰਟਲ' : 'Quintals'} ({acres} {language === 'pa' ? 'ਏਕੜ' : 'Acres'} {CROPS[crop].name[language]})
                 </p>
               </div>
 
               <div className="text-right">
-                <span className="text-xs text-stone-400 block">{i18n.netCash}</span>
-                <span className="text-lg sm:text-xl font-black text-emerald-400">
+                <span className="text-xs text-emerald-400 block">{i18n.netCash}</span>
+                <span className="text-lg sm:text-xl font-emerald-950 text-emerald-400">
                   +₹{netPayout.toLocaleString('en-IN')}
                 </span>
               </div>
@@ -281,8 +281,8 @@ export const PickupSchedulerModal: React.FC<PickupSchedulerModalProps> = ({
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <div>
-                  <label className="block text-xs font-bold text-stone-300 mb-1.5 flex items-center gap-1">
-                    <User className="w-3.5 h-3.5 text-stone-400" />
+                  <label className="block text-xs font-bold text-emerald-300 mb-1.5 flex items-center gap-1">
+                    <User className="w-3.5 h-3.5 text-emerald-400" />
                     <span>{i18n.farmerName}</span>
                   </label>
                   <input
@@ -290,13 +290,13 @@ export const PickupSchedulerModal: React.FC<PickupSchedulerModalProps> = ({
                     required
                     value={farmerName}
                     onChange={(e) => setFarmerName(e.target.value)}
-                    className="w-full bg-[#131314] border border-[#2e3134] rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:border-emerald-500"
+                    className="w-full bg-[#052e16] border border-[#059669] rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-emerald-50 focus:outline-none focus:border-emerald-500"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-stone-300 mb-1.5 flex items-center gap-1">
-                    <Phone className="w-3.5 h-3.5 text-stone-400" />
+                  <label className="block text-xs font-bold text-emerald-300 mb-1.5 flex items-center gap-1">
+                    <Phone className="w-3.5 h-3.5 text-emerald-400" />
                     <span>{i18n.phone}</span>
                   </label>
                   <input
@@ -304,15 +304,15 @@ export const PickupSchedulerModal: React.FC<PickupSchedulerModalProps> = ({
                     required
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="w-full bg-[#131314] border border-[#2e3134] rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:border-emerald-500"
+                    className="w-full bg-[#052e16] border border-[#059669] rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-emerald-50 focus:outline-none focus:border-emerald-500"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <div>
-                  <label className="block text-xs font-bold text-stone-300 mb-1.5 flex items-center gap-1">
-                    <Calendar className="w-3.5 h-3.5 text-stone-400" />
+                  <label className="block text-xs font-bold text-emerald-300 mb-1.5 flex items-center gap-1">
+                    <Calendar className="w-3.5 h-3.5 text-emerald-400" />
                     <span>{i18n.date}</span>
                   </label>
                   <input
@@ -320,19 +320,19 @@ export const PickupSchedulerModal: React.FC<PickupSchedulerModalProps> = ({
                     required
                     value={scheduledDate}
                     onChange={(e) => setScheduledDate(e.target.value)}
-                    className="w-full bg-[#131314] border border-[#2e3134] rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:border-emerald-500 cursor-pointer"
+                    className="w-full bg-[#052e16] border border-[#059669] rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-emerald-50 focus:outline-none focus:border-emerald-500 cursor-pointer"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-stone-300 mb-1.5 flex items-center gap-1">
-                    <Clock className="w-3.5 h-3.5 text-stone-400" />
+                  <label className="block text-xs font-bold text-emerald-300 mb-1.5 flex items-center gap-1">
+                    <Clock className="w-3.5 h-3.5 text-emerald-400" />
                     <span>{i18n.slot}</span>
                   </label>
                   <select
                     value={timeSlot}
                     onChange={(e) => setTimeSlot(e.target.value as PickupBooking['timeSlot'])}
-                    className="w-full bg-[#131314] border border-[#2e3134] rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:border-emerald-500 cursor-pointer"
+                    className="w-full bg-[#052e16] border border-[#059669] rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-emerald-50 focus:outline-none focus:border-emerald-500 cursor-pointer"
                   >
                     <option value="Morning (07:00 - 11:00)">{i18n.slotMorning}</option>
                     <option value="Afternoon (11:00 - 15:00)">{i18n.slotAfternoon}</option>
@@ -342,8 +342,8 @@ export const PickupSchedulerModal: React.FC<PickupSchedulerModalProps> = ({
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-stone-300 mb-1.5 flex items-center gap-1">
-                  <Truck className="w-3.5 h-3.5 text-stone-400" />
+                <label className="block text-xs font-bold text-emerald-300 mb-1.5 flex items-center gap-1">
+                  <Truck className="w-3.5 h-3.5 text-emerald-400" />
                   <span>{i18n.equipment}</span>
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
@@ -359,7 +359,7 @@ export const PickupSchedulerModal: React.FC<PickupSchedulerModalProps> = ({
                       className={`p-2.5 rounded-xl border text-left text-xs font-bold transition cursor-pointer ${
                         machineryType === item.val
                           ? 'bg-emerald-950/80 border-emerald-500 text-emerald-300'
-                          : 'bg-[#131314] border-[#2e3134] text-stone-400 hover:border-stone-500'
+                          : 'bg-[#052e16] border-[#059669] text-emerald-400 hover:border-emerald-500'
                       }`}
                     >
                       {item.label}
@@ -372,7 +372,7 @@ export const PickupSchedulerModal: React.FC<PickupSchedulerModalProps> = ({
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-emerald-600 hover:bg-emerald-500 text-stone-950 font-black py-3 rounded-2xl text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg transition active:scale-95 cursor-pointer disabled:opacity-50"
+                  className="w-full bg-emerald-600 hover:bg-emerald-500 text-emerald-950 font-emerald-950 py-3 rounded-2xl text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg transition active:scale-95 cursor-pointer disabled:opacity-50"
                 >
                   <CheckCircle2 className="w-4 h-4" />
                   <span>{isSubmitting ? i18n.submitting : i18n.submitBtn}</span>
@@ -383,35 +383,35 @@ export const PickupSchedulerModal: React.FC<PickupSchedulerModalProps> = ({
         ) : (
           /* Confirmation Screen */
           <div className="text-center py-4 space-y-4 animate-fadeIn">
-            <div className="w-16 h-16 rounded-full bg-emerald-500 text-stone-950 flex items-center justify-center mx-auto shadow-lg shadow-emerald-500/30">
+            <div className="w-16 h-16 rounded-full bg-emerald-500 text-emerald-950 flex items-center justify-center mx-auto shadow-lg shadow-emerald-500/30">
               <CheckCircle2 className="w-9 h-9 stroke-[2.5]" />
             </div>
 
             <div>
-              <h3 className="text-xl font-black text-white">
+              <h3 className="text-xl font-emerald-950 text-emerald-50">
                 {i18n.confirmedTitle}
               </h3>
-              <p className="text-xs text-stone-400 mt-1">
+              <p className="text-xs text-emerald-400 mt-1">
                 {i18n.smsNote}
               </p>
             </div>
 
-            <div className="bg-[#131314] border border-[#2e3134] rounded-2xl p-4 text-left space-y-2 text-xs">
-              <div className="flex justify-between border-b border-[#2e3134] pb-2">
-                <span className="text-stone-400">{i18n.bookingToken}</span>
+            <div className="bg-[#052e16] border border-[#059669] rounded-2xl p-4 text-left space-y-2 text-xs">
+              <div className="flex justify-between border-b border-[#059669] pb-2">
+                <span className="text-emerald-400">{i18n.bookingToken}</span>
                 <span className="font-mono font-bold text-emerald-400">{confirmedBooking.id}</span>
               </div>
-              <div className="flex justify-between border-b border-[#2e3134] pb-2">
-                <span className="text-stone-400">{i18n.operatorAssigned}</span>
-                <span className="font-bold text-white">{confirmedBooking.operatorName} ({confirmedBooking.operatorPhone})</span>
+              <div className="flex justify-between border-b border-[#059669] pb-2">
+                <span className="text-emerald-400">{i18n.operatorAssigned}</span>
+                <span className="font-bold text-emerald-50">{confirmedBooking.operatorName} ({confirmedBooking.operatorPhone})</span>
               </div>
-              <div className="flex justify-between border-b border-[#2e3134] pb-2">
-                <span className="text-stone-400">{i18n.scheduledOn}</span>
-                <span className="font-bold text-white">{confirmedBooking.scheduledDate} • {confirmedBooking.timeSlot}</span>
+              <div className="flex justify-between border-b border-[#059669] pb-2">
+                <span className="text-emerald-400">{i18n.scheduledOn}</span>
+                <span className="font-bold text-emerald-50">{confirmedBooking.scheduledDate} • {confirmedBooking.timeSlot}</span>
               </div>
               <div className="flex justify-between pt-1">
-                <span className="text-stone-400">{i18n.expectedPayment}</span>
-                <span className="font-black text-emerald-400 text-sm">
+                <span className="text-emerald-400">{i18n.expectedPayment}</span>
+                <span className="font-emerald-950 text-emerald-400 text-sm">
                   +₹{confirmedBooking.netPaymentExpected.toLocaleString('en-IN')}
                 </span>
               </div>
@@ -422,7 +422,7 @@ export const PickupSchedulerModal: React.FC<PickupSchedulerModalProps> = ({
                 setConfirmedBooking(null);
                 onClose();
               }}
-              className="w-full bg-emerald-600 hover:bg-emerald-500 text-stone-950 font-black py-3 rounded-2xl text-xs sm:text-sm transition cursor-pointer"
+              className="w-full bg-emerald-600 hover:bg-emerald-500 text-emerald-950 font-emerald-950 py-3 rounded-2xl text-xs sm:text-sm transition cursor-pointer"
             >
               {i18n.doneBtn}
             </button>

@@ -117,28 +117,28 @@ export const GurpreetDemoModal: React.FC<GurpreetDemoModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-stone-950/70 backdrop-blur-xs animate-fadeIn">
-      <div className="relative bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-stone-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-emerald-950/70 backdrop-blur-xs animate-fadeIn">
+      <div className="relative bg-emerald-50 rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-emerald-200">
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 text-stone-400 hover:text-stone-700 rounded-full hover:bg-stone-100 transition cursor-pointer"
+          className="absolute top-5 right-5 p-2 text-emerald-400 hover:text-emerald-700 rounded-full hover:bg-emerald-100 transition cursor-pointer"
         >
           <X className="w-5 h-5" />
         </button>
 
         {/* Header Indicator */}
         <div className="flex items-center justify-between gap-2 mb-4">
-          <span className="text-xs font-bold uppercase tracking-wider text-amber-900 bg-amber-100 px-3 py-1 rounded-full flex items-center gap-1.5">
-            <Sparkles className="w-3.5 h-3.5 text-amber-700 fill-amber-700" />
+          <span className="text-xs font-bold uppercase tracking-wider text-emerald-900 bg-emerald-100 px-3 py-1 rounded-full flex items-center gap-1.5">
+            <Sparkles className="w-3.5 h-3.5 text-emerald-700 fill-emerald-700" />
             <span>2-Minute Hackathon Pitch Demo Flow</span>
           </span>
-          <span className="text-xs font-bold text-stone-400">
+          <span className="text-xs font-bold text-emerald-400">
             Step {currentStep} of {steps.length}
           </span>
         </div>
 
         {/* Step Title */}
-        <h2 className="text-xl sm:text-2xl font-black text-stone-900 mb-1">
+        <h2 className="text-xl sm:text-2xl font-emerald-950 text-emerald-900 mb-1">
           {current.title}
         </h2>
         <p className="text-xs sm:text-sm font-semibold text-emerald-700 mb-4">
@@ -146,17 +146,17 @@ export const GurpreetDemoModal: React.FC<GurpreetDemoModalProps> = ({
         </p>
 
         {/* Step Content */}
-        <div className="bg-stone-50 border border-stone-200 rounded-2xl p-5 mb-6 text-xs sm:text-sm text-stone-700 leading-relaxed space-y-3">
+        <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-5 mb-6 text-xs sm:text-sm text-emerald-700 leading-relaxed space-y-3">
           <p>{current.description}</p>
 
           {currentStep === 2 && (
-            <div className="bg-white p-3 rounded-xl border border-stone-200 flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-amber-200 flex items-center justify-center font-bold text-amber-900">
+            <div className="bg-emerald-50 p-3 rounded-xl border border-emerald-200 flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-emerald-200 flex items-center justify-center font-bold text-emerald-900">
                 👨‍🌾
               </div>
               <div className="text-xs">
-                <p className="font-bold text-stone-900">Gurpreet Singh (Chhajli, Sangrur)</p>
-                <p className="text-stone-500">8 Acres Non-Basmati Paddy • 12 Days left to sow wheat</p>
+                <p className="font-bold text-emerald-900">Gurpreet Singh (Chhajli, Sangrur)</p>
+                <p className="text-emerald-500">8 Acres Non-Basmati Paddy • 12 Days left to sow wheat</p>
               </div>
             </div>
           )}
@@ -166,7 +166,7 @@ export const GurpreetDemoModal: React.FC<GurpreetDemoModalProps> = ({
               <div className="bg-emerald-100 text-emerald-950 p-2 rounded-lg font-bold">
                 Sell Stubble: +₹44,000 Net
               </div>
-              <div className="bg-rose-100 text-rose-950 p-2 rounded-lg font-bold">
+              <div className="bg-emerald-100 text-emerald-950 p-2 rounded-lg font-bold">
                 Burn Stubble: ₹0 + ₹15k Fine
               </div>
             </div>
@@ -187,18 +187,18 @@ export const GurpreetDemoModal: React.FC<GurpreetDemoModalProps> = ({
                   ? 'w-6 bg-emerald-700'
                   : s.step < currentStep
                   ? 'w-2 bg-emerald-300'
-                  : 'w-2 bg-stone-200'
+                  : 'w-2 bg-emerald-200'
               }`}
             />
           ))}
         </div>
 
         {/* Nav Controls */}
-        <div className="flex items-center justify-between gap-3 pt-3 border-t border-stone-100">
+        <div className="flex items-center justify-between gap-3 pt-3 border-t border-emerald-100">
           <button
             onClick={handlePrev}
             disabled={currentStep === 1}
-            className="px-4 py-2 text-xs sm:text-sm font-semibold text-stone-600 hover:text-stone-900 disabled:opacity-30 disabled:pointer-events-none flex items-center gap-1 cursor-pointer"
+            className="px-4 py-2 text-xs sm:text-sm font-semibold text-emerald-600 hover:text-emerald-900 disabled:opacity-30 disabled:pointer-events-none flex items-center gap-1 cursor-pointer"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Previous</span>
@@ -206,7 +206,7 @@ export const GurpreetDemoModal: React.FC<GurpreetDemoModalProps> = ({
 
           <button
             onClick={handleNext}
-            className="bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs sm:text-sm px-6 py-2.5 rounded-xl shadow-md transition active:scale-95 flex items-center gap-2 cursor-pointer"
+            className="bg-emerald-700 hover:bg-emerald-800 text-emerald-50 font-bold text-xs sm:text-sm px-6 py-2.5 rounded-xl shadow-md transition active:scale-95 flex items-center gap-2 cursor-pointer"
           >
             <span>{current.actionLabel}</span>
             <ArrowRight className="w-4 h-4" />

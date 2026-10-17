@@ -153,38 +153,38 @@ export const FarmerProfileDrawer: React.FC<FarmerProfileDrawerProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-stone-950/70 backdrop-blur-xs flex justify-end animate-fadeIn">
-      <div className="w-full max-w-xs bg-[#1c1d1f] text-white h-full p-5 shadow-2xl flex flex-col justify-between overflow-y-auto border-l border-[#2e3134]">
+    <div className="fixed inset-0 z-50 bg-emerald-950/70 backdrop-blur-xs flex justify-end animate-fadeIn">
+      <div className="w-full max-w-xs bg-[#064e3b] text-emerald-50 h-full p-5 shadow-2xl flex flex-col justify-between overflow-y-auto border-l border-[#059669]">
         <div>
           {/* Header with Back button */}
-          <div className="flex items-center justify-between pb-3.5 border-b border-[#2e3134]">
+          <div className="flex items-center justify-between pb-3.5 border-b border-[#059669]">
             <button
               onClick={onClose}
-              className="flex items-center gap-1.5 text-stone-200 hover:text-white bg-[#282a2c] hover:bg-[#3c4043] px-2.5 py-1 rounded-xl text-xs font-bold transition cursor-pointer"
+              className="flex items-center gap-1.5 text-emerald-200 hover:text-emerald-50 bg-[#047857] hover:bg-[#10b981] px-2.5 py-1 rounded-xl text-xs font-bold transition cursor-pointer"
             >
               <ArrowLeft className="w-3.5 h-3.5 text-emerald-400" />
               <span>{i18n.backBtn}</span>
             </button>
-            <span className="text-xs font-bold uppercase tracking-wider text-stone-400">
+            <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
               {i18n.profileSettings}
             </span>
             <button
               onClick={onClose}
-              className="p-1 rounded-full hover:bg-[#282a2c] text-stone-400 cursor-pointer"
+              className="p-1 rounded-full hover:bg-[#047857] text-emerald-400 cursor-pointer"
             >
               <X className="w-4 h-4" />
             </button>
           </div>
 
           {/* User Card */}
-          <div className="mt-4 flex items-center gap-3 bg-[#131314] p-3.5 rounded-2xl border border-[#2e3134]">
-            <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-amber-500 to-amber-700 text-stone-950 flex items-center justify-center font-black text-lg shadow-sm">
+          <div className="mt-4 flex items-center gap-3 bg-[#052e16] p-3.5 rounded-2xl border border-[#059669]">
+            <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-emerald-500 to-emerald-700 text-emerald-950 flex items-center justify-center font-emerald-950 text-lg shadow-sm">
               GS
             </div>
             <div>
-              <h3 className="font-extrabold text-white text-sm">Gurpreet Singh</h3>
-              <p className="text-xs text-stone-400 flex items-center gap-1">
-                <MapPin className="w-3 h-3 text-stone-500" />
+              <h3 className="font-extrabold text-emerald-50 text-sm">Gurpreet Singh</h3>
+              <p className="text-xs text-emerald-400 flex items-center gap-1">
+                <MapPin className="w-3 h-3 text-emerald-500" />
                 <span>
                   {village}, {district}
                 </span>
@@ -197,11 +197,11 @@ export const FarmerProfileDrawer: React.FC<FarmerProfileDrawerProps> = ({
 
           {/* Language Selection: 4 Options with English as Default */}
           <div className="mt-5">
-            <label className="text-xs font-bold text-stone-300 uppercase tracking-wider block mb-2 flex items-center gap-1">
-              <Languages className="w-3.5 h-3.5 text-stone-400" />
+            <label className="text-xs font-bold text-emerald-300 uppercase tracking-wider block mb-2 flex items-center gap-1">
+              <Languages className="w-3.5 h-3.5 text-emerald-400" />
               <span>{i18n.langLabel}</span>
             </label>
-            <div className="grid grid-cols-4 gap-1 bg-[#131314] p-1 rounded-xl border border-[#2e3134]">
+            <div className="grid grid-cols-4 gap-1 bg-[#052e16] p-1 rounded-xl border border-[#059669]">
               {[
                 { id: 'en' as Language, label: 'EN' },
                 { id: 'hi' as Language, label: 'हि' },
@@ -213,8 +213,8 @@ export const FarmerProfileDrawer: React.FC<FarmerProfileDrawerProps> = ({
                   onClick={() => onLanguageChange(item.id)}
                   className={`py-1.5 text-xs font-bold rounded-lg transition cursor-pointer text-center ${
                     language === item.id
-                      ? 'bg-emerald-600 text-stone-950 shadow-xs font-black'
-                      : 'text-stone-400 hover:text-white'
+                      ? 'bg-emerald-600 text-emerald-950 shadow-xs font-emerald-950'
+                      : 'text-emerald-400 hover:text-emerald-50'
                   }`}
                 >
                   {item.label}
@@ -224,14 +224,14 @@ export const FarmerProfileDrawer: React.FC<FarmerProfileDrawerProps> = ({
           </div>
 
           {/* Voice Sound Toggle */}
-          <div className="mt-4 flex items-center justify-between bg-[#131314] p-3 rounded-xl border border-[#2e3134]">
-            <span className="text-xs font-bold text-stone-300">{i18n.audioLabel}</span>
+          <div className="mt-4 flex items-center justify-between bg-[#052e16] p-3 rounded-xl border border-[#059669]">
+            <span className="text-xs font-bold text-emerald-300">{i18n.audioLabel}</span>
             <button
               onClick={onToggleSound}
               className={`p-2 rounded-lg border text-xs flex items-center gap-1.5 transition cursor-pointer ${
                 soundEnabled
                   ? 'bg-emerald-950/80 border-emerald-500/60 text-emerald-300'
-                  : 'bg-[#282a2c] border-[#3c4043] text-stone-400'
+                  : 'bg-[#047857] border-[#10b981] text-emerald-400'
               }`}
             >
               {soundEnabled ? <Volume2 className="w-4 h-4 text-emerald-400" /> : <VolumeX className="w-4 h-4" />}
@@ -240,17 +240,17 @@ export const FarmerProfileDrawer: React.FC<FarmerProfileDrawerProps> = ({
           </div>
 
           {/* NASA FIRMS MAP KEY SETTING */}
-          <div className="mt-4 bg-[#131314] p-3 rounded-xl border border-[#2e3134] space-y-2">
+          <div className="mt-4 bg-[#052e16] p-3 rounded-xl border border-[#059669] space-y-2">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-bold text-stone-300 flex items-center gap-1">
-                <Key className="w-3.5 h-3.5 text-amber-400" />
+              <span className="text-xs font-bold text-emerald-300 flex items-center gap-1">
+                <Key className="w-3.5 h-3.5 text-emerald-400" />
                 <span>{i18n.nasaKeyTitle}</span>
               </span>
-              <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded ${hasNasaKey ? 'bg-emerald-900/60 text-emerald-300' : 'bg-stone-800 text-stone-400'}`}>
+              <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded ${hasNasaKey ? 'bg-emerald-900/60 text-emerald-300' : 'bg-emerald-800 text-emerald-400'}`}>
                 {hasNasaKey ? 'Active' : 'Unset'}
               </span>
             </div>
-            <p className="text-[10px] text-stone-400">{i18n.nasaKeySub}</p>
+            <p className="text-[10px] text-emerald-400">{i18n.nasaKeySub}</p>
 
             <form onSubmit={handleSaveNasaKey} className="flex gap-1.5">
               <input
@@ -258,11 +258,11 @@ export const FarmerProfileDrawer: React.FC<FarmerProfileDrawerProps> = ({
                 placeholder="NASA Map Key..."
                 value={nasaKeyInput}
                 onChange={(e) => setNasaKeyInput(e.target.value)}
-                className="flex-1 bg-[#1c1d1f] border border-[#2e3134] rounded-lg px-2 py-1 text-[11px] text-white focus:outline-none focus:border-emerald-500 font-mono"
+                className="flex-1 bg-[#064e3b] border border-[#059669] rounded-lg px-2 py-1 text-[11px] text-emerald-50 focus:outline-none focus:border-emerald-500 font-mono"
               />
               <button
                 type="submit"
-                className="bg-emerald-600 hover:bg-emerald-500 text-stone-950 font-bold px-2 py-1 rounded-lg text-[10px] cursor-pointer"
+                className="bg-emerald-600 hover:bg-emerald-500 text-emerald-950 font-bold px-2 py-1 rounded-lg text-[10px] cursor-pointer"
               >
                 {keySaved ? i18n.saved : i18n.saveKey}
               </button>
@@ -272,7 +272,7 @@ export const FarmerProfileDrawer: React.FC<FarmerProfileDrawerProps> = ({
               href="https://firms.modaps.eosdis.nasa.gov/api/map_key/"
               target="_blank"
               rel="noreferrer"
-              className="text-[10px] text-amber-400 hover:underline flex items-center gap-0.5 pt-0.5"
+              className="text-[10px] text-emerald-400 hover:underline flex items-center gap-0.5 pt-0.5"
             >
               <span>{i18n.getKeyFree}</span>
               <ExternalLink className="w-2.5 h-2.5" />
@@ -281,12 +281,12 @@ export const FarmerProfileDrawer: React.FC<FarmerProfileDrawerProps> = ({
 
           {/* Active Bookings */}
           <div className="mt-4">
-            <span className="text-xs font-bold text-stone-300 uppercase tracking-wider block mb-2 flex items-center gap-1">
-              <CalendarCheck className="w-3.5 h-3.5 text-stone-400" />
+            <span className="text-xs font-bold text-emerald-300 uppercase tracking-wider block mb-2 flex items-center gap-1">
+              <CalendarCheck className="w-3.5 h-3.5 text-emerald-400" />
               <span>{i18n.activeBookings} ({bookings.length})</span>
             </span>
             {bookings.length === 0 ? (
-              <p className="text-xs text-stone-400 bg-[#131314] p-3 rounded-xl border border-dashed border-[#2e3134]">
+              <p className="text-xs text-emerald-400 bg-[#052e16] p-3 rounded-xl border border-dashed border-[#059669]">
                 {i18n.noBookings}
               </p>
             ) : (
@@ -294,16 +294,16 @@ export const FarmerProfileDrawer: React.FC<FarmerProfileDrawerProps> = ({
                 {bookings.map((b) => (
                   <div
                     key={b.id}
-                    className="bg-[#131314] border border-[#2e3134] rounded-xl p-2.5 text-xs"
+                    className="bg-[#052e16] border border-[#059669] rounded-xl p-2.5 text-xs"
                   >
-                    <div className="flex justify-between font-bold text-white">
+                    <div className="flex justify-between font-bold text-emerald-50">
                       <span className="font-mono text-emerald-400">{b.id}</span>
                       <span className="text-emerald-400 font-extrabold">
                         +₹{b.netPaymentExpected.toLocaleString('en-IN')}
                       </span>
                     </div>
-                    <p className="text-[11px] text-stone-300 mt-0.5">{b.buyerName}</p>
-                    <p className="text-[10px] text-stone-400 mt-1">
+                    <p className="text-[11px] text-emerald-300 mt-0.5">{b.buyerName}</p>
+                    <p className="text-[10px] text-emerald-400 mt-1">
                       {b.scheduledDate} • {b.timeSlot}
                     </p>
                   </div>
@@ -314,15 +314,15 @@ export const FarmerProfileDrawer: React.FC<FarmerProfileDrawerProps> = ({
         </div>
 
         {/* 2-Min Demo Walkthrough Trigger */}
-        <div className="pt-4 border-t border-[#2e3134]">
+        <div className="pt-4 border-t border-[#059669]">
           <button
             onClick={() => {
               onClose();
               onOpenDemo();
             }}
-            className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-stone-950 font-black text-xs py-2.5 rounded-xl flex items-center justify-center gap-1.5 shadow-xs transition active:scale-95 cursor-pointer"
+            className="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-emerald-950 font-emerald-950 text-xs py-2.5 rounded-xl flex items-center justify-center gap-1.5 shadow-xs transition active:scale-95 cursor-pointer"
           >
-            <Sparkles className="w-4 h-4 fill-stone-950" />
+            <Sparkles className="w-4 h-4 fill-emerald-950" />
             <span>{i18n.pitchBtn}</span>
           </button>
         </div>

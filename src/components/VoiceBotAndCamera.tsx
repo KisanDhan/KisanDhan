@@ -267,11 +267,11 @@ export const VoiceBotAndCamera: React.FC<VoiceBotAndCameraProps> = ({
     const ctx = canvas.getContext('2d');
     if (ctx) {
       // Golden straw background
-      ctx.fillStyle = sampleType.includes('paddy') ? '#d97706' : sampleType === 'wheat' ? '#ca8a04' : '#65a30d';
+      ctx.fillStyle = sampleType.includes('paddy') ? '#065f46' : sampleType === 'wheat' ? '#047857' : '#10b981';
       ctx.fillRect(0, 0, 400, 300);
 
       // Stubble lines
-      ctx.strokeStyle = '#fef08a';
+      ctx.strokeStyle = '#a7f3d0';
       ctx.lineWidth = 3;
       for (let i = 0; i < 60; i++) {
         const x = Math.random() * 400;
@@ -282,7 +282,7 @@ export const VoiceBotAndCamera: React.FC<VoiceBotAndCameraProps> = ({
         ctx.stroke();
       }
 
-      ctx.fillStyle = '#1c1917';
+      ctx.fillStyle = '#052e16';
       ctx.font = 'bold 20px sans-serif';
       ctx.fillText(name, 20, 40);
     }
@@ -386,18 +386,18 @@ export const VoiceBotAndCamera: React.FC<VoiceBotAndCameraProps> = ({
   ];
 
   return (
-    <div className="bg-white border border-stone-200 rounded-3xl p-5 sm:p-7 shadow-sm">
+    <div className="bg-emerald-50 border border-emerald-200 rounded-3xl p-5 sm:p-7 shadow-sm">
       {/* Voice Assistant Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5 pb-4 border-b border-stone-100">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5 pb-4 border-b border-emerald-100">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-2xl bg-amber-500/15 text-amber-700 flex items-center justify-center font-bold">
+          <div className="w-10 h-10 rounded-2xl bg-emerald-500/15 text-emerald-700 flex items-center justify-center font-bold">
             <Bot className="w-5 h-5" />
           </div>
           <div>
-            <h2 className="text-lg sm:text-xl font-bold text-stone-900">
+            <h2 className="text-lg sm:text-xl font-bold text-emerald-900">
               {t.voiceHeroTitle}
             </h2>
-            <p className="text-xs text-stone-500">
+            <p className="text-xs text-emerald-500">
               {t.voiceHeroSubtitle}
             </p>
           </div>
@@ -414,7 +414,7 @@ export const VoiceBotAndCamera: React.FC<VoiceBotAndCameraProps> = ({
       {/* Main Grid: Bot Transcript & Interactive Controls */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left: Chat Thread / Spoken Transcript (7 cols) */}
-        <div className="lg:col-span-7 flex flex-col justify-between h-[360px] bg-stone-50 rounded-2xl border border-stone-200 p-4">
+        <div className="lg:col-span-7 flex flex-col justify-between h-[360px] bg-emerald-50 rounded-2xl border border-emerald-200 p-4">
           {/* Scrollable Conversation Stream */}
           <div className="overflow-y-auto space-y-3 pr-2 scrollbar-thin">
             {messages.map((m) => (
@@ -425,17 +425,17 @@ export const VoiceBotAndCamera: React.FC<VoiceBotAndCameraProps> = ({
                 }`}
               >
                 {m.sender !== 'user' && (
-                  <div className="w-7 h-7 rounded-full bg-emerald-700 text-white flex items-center justify-center shrink-0 text-xs">
+                  <div className="w-7 h-7 rounded-full bg-emerald-700 text-emerald-50 flex items-center justify-center shrink-0 text-xs">
                     <Bot className="w-4 h-4" />
                   </div>
                 )}
                 <div
                   className={`max-w-[85%] rounded-2xl p-3 text-xs sm:text-sm ${
                     m.sender === 'user'
-                      ? 'bg-amber-600 text-white rounded-tr-none'
+                      ? 'bg-emerald-600 text-emerald-50 rounded-tr-none'
                       : m.sender === 'system'
-                      ? 'bg-amber-50 border border-amber-200 text-amber-900'
-                      : 'bg-white border border-stone-200 text-stone-800 rounded-tl-none shadow-xs'
+                      ? 'bg-emerald-50 border border-emerald-200 text-emerald-900'
+                      : 'bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-tl-none shadow-xs'
                   }`}
                 >
                   <p className="leading-relaxed whitespace-pre-wrap">{m.text}</p>
@@ -453,7 +453,7 @@ export const VoiceBotAndCamera: React.FC<VoiceBotAndCameraProps> = ({
                   </div>
                 </div>
                 {m.sender === 'user' && (
-                  <div className="w-7 h-7 rounded-full bg-amber-600 text-white flex items-center justify-center shrink-0 text-xs">
+                  <div className="w-7 h-7 rounded-full bg-emerald-600 text-emerald-50 flex items-center justify-center shrink-0 text-xs">
                     <User className="w-4 h-4" />
                   </div>
                 )}
@@ -462,13 +462,13 @@ export const VoiceBotAndCamera: React.FC<VoiceBotAndCameraProps> = ({
 
             {/* Identified Crop Dialog within Chat */}
             {identifiedCropResult && (
-              <div className="bg-emerald-50 border-2 border-emerald-500 rounded-2xl p-3.5 shadow-sm text-stone-900 animate-fadeIn">
+              <div className="bg-emerald-50 border-2 border-emerald-500 rounded-2xl p-3.5 shadow-sm text-emerald-900 animate-fadeIn">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-xs font-bold text-emerald-800 flex items-center gap-1.5">
                     <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
                     {t.photoIdentified}
                   </span>
-                  <span className="bg-emerald-600 text-white text-[11px] font-black px-2 py-0.5 rounded-full">
+                  <span className="bg-emerald-600 text-emerald-50 text-[11px] font-emerald-950 px-2 py-0.5 rounded-full">
                     {identifiedCropResult.confidence}% Confidence
                   </span>
                 </div>
@@ -481,16 +481,16 @@ export const VoiceBotAndCamera: React.FC<VoiceBotAndCameraProps> = ({
                     />
                   )}
                   <div className="text-xs">
-                    <p className="font-bold text-stone-900 text-sm">
+                    <p className="font-bold text-emerald-900 text-sm">
                       {identifiedCropResult.cropName}
                     </p>
-                    <p className="text-stone-600">{identifiedCropResult.condition}</p>
+                    <p className="text-emerald-600">{identifiedCropResult.condition}</p>
                   </div>
                 </div>
                 <div className="mt-3 flex items-center gap-2">
                   <button
                     onClick={confirmCropIdentification}
-                    className="flex-1 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 shadow-xs transition active:scale-95 cursor-pointer"
+                    className="flex-1 bg-emerald-700 hover:bg-emerald-800 text-emerald-50 font-bold text-xs py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 shadow-xs transition active:scale-95 cursor-pointer"
                   >
                     <Check className="w-3.5 h-3.5" />
                     <span>
@@ -499,7 +499,7 @@ export const VoiceBotAndCamera: React.FC<VoiceBotAndCameraProps> = ({
                   </button>
                   <button
                     onClick={() => setIdentifiedCropResult(null)}
-                    className="bg-white border border-stone-300 hover:bg-stone-100 text-stone-700 text-xs py-2 px-3 rounded-lg cursor-pointer"
+                    className="bg-emerald-50 border border-emerald-300 hover:bg-emerald-100 text-emerald-700 text-xs py-2 px-3 rounded-lg cursor-pointer"
                   >
                     {language === 'pa' ? 'ਬਦਲੋ' : language === 'hi' ? 'बदलें' : 'Change'}
                   </button>
@@ -508,7 +508,7 @@ export const VoiceBotAndCamera: React.FC<VoiceBotAndCameraProps> = ({
             )}
 
             {isLoading && (
-              <div className="flex items-center gap-2 text-stone-500 text-xs italic bg-white p-2.5 rounded-xl border border-stone-200 w-fit">
+              <div className="flex items-center gap-2 text-emerald-500 text-xs italic bg-emerald-50 p-2.5 rounded-xl border border-emerald-200 w-fit">
                 <RefreshCw className="w-3.5 h-3.5 animate-spin text-emerald-600" />
                 <span>
                   {language === 'pa' ? 'ਵਿਸ਼ਲੇਸ਼ਣ ਹੋ ਰਿਹਾ ਹੈ...' : language === 'hi' ? 'विश्लेषण कर रहे हैं...' : 'Processing audio & vision...'}
@@ -519,8 +519,8 @@ export const VoiceBotAndCamera: React.FC<VoiceBotAndCameraProps> = ({
           </div>
 
           {/* Quick Voice Prompt Chips */}
-          <div className="pt-2 border-t border-stone-200 mt-2">
-            <p className="text-[11px] font-semibold text-stone-500 mb-1.5">
+          <div className="pt-2 border-t border-emerald-200 mt-2">
+            <p className="text-[11px] font-semibold text-emerald-500 mb-1.5">
               {language === 'pa' ? 'ਤੁਰੰਤ ਬੋਲੋ ਜਾਂ ਕਲਿੱਕ ਕਰੋ:' : language === 'hi' ? 'त्वरित प्रश्न / बोलें:' : 'Quick voice test chips:'}
             </p>
             <div className="flex flex-wrap gap-1.5">
@@ -528,7 +528,7 @@ export const VoiceBotAndCamera: React.FC<VoiceBotAndCameraProps> = ({
                 <button
                   key={idx}
                   onClick={() => handleSendMessage(qp.text)}
-                  className="bg-white hover:bg-stone-100 text-stone-700 border border-stone-200 text-[11px] font-medium py-1 px-2.5 rounded-lg shadow-2xs transition active:scale-95 cursor-pointer"
+                  className="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 text-[11px] font-medium py-1 px-2.5 rounded-lg shadow-2xs transition active:scale-95 cursor-pointer"
                 >
                   {qp.label}
                 </button>
@@ -543,16 +543,16 @@ export const VoiceBotAndCamera: React.FC<VoiceBotAndCameraProps> = ({
           <div
             className={`relative rounded-2xl p-5 border-2 text-center transition flex flex-col items-center justify-center ${
               isListening
-                ? 'bg-red-50 border-red-500 shadow-md ring-4 ring-red-100'
-                : 'bg-stone-50 border-stone-200 hover:border-amber-400'
+                ? 'bg-emerald-50 border-emerald-500 shadow-md ring-4 ring-emerald-100'
+                : 'bg-emerald-50 border-emerald-200 hover:border-emerald-400'
             }`}
           >
             <button
               onClick={toggleListening}
               className={`w-20 h-20 rounded-full flex items-center justify-center transition shadow-lg active:scale-95 cursor-pointer ${
                 isListening
-                  ? 'bg-red-600 text-white animate-pulse'
-                  : 'bg-gradient-to-tr from-amber-600 to-amber-500 hover:from-amber-700 hover:to-amber-600 text-stone-950 font-bold'
+                  ? 'bg-emerald-600 text-emerald-50 animate-pulse'
+                  : 'bg-gradient-to-tr from-emerald-600 to-emerald-500 hover:from-emerald-700 hover:to-emerald-600 text-emerald-950 font-bold'
               }`}
               title="Click and speak in Hindi, Punjabi or English"
             >
@@ -563,7 +563,7 @@ export const VoiceBotAndCamera: React.FC<VoiceBotAndCameraProps> = ({
               )}
             </button>
 
-            <h3 className="mt-3 font-bold text-sm sm:text-base text-stone-900">
+            <h3 className="mt-3 font-bold text-sm sm:text-base text-emerald-900">
               {isListening
                 ? t.listening
                 : language === 'pa'
@@ -572,7 +572,7 @@ export const VoiceBotAndCamera: React.FC<VoiceBotAndCameraProps> = ({
                 ? 'बोलने के लिए माइक दबाएं'
                 : 'Tap Mic to Speak'}
             </h3>
-            <p className="text-xs text-stone-500 mt-0.5">
+            <p className="text-xs text-emerald-500 mt-0.5">
               {language === 'pa'
                 ? 'ਪੰਜਾਬੀ (pa-IN) / ਹਿੰਦੀ (hi-IN) ਵਿੱਚ ਗੱਲ ਕਰੋ'
                 : language === 'hi'
@@ -581,22 +581,22 @@ export const VoiceBotAndCamera: React.FC<VoiceBotAndCameraProps> = ({
             </p>
 
             {transcript && (
-              <div className="mt-2 text-xs bg-white text-stone-800 p-2 rounded-lg border border-stone-200 max-w-full truncate">
+              <div className="mt-2 text-xs bg-emerald-50 text-emerald-800 p-2 rounded-lg border border-emerald-200 max-w-full truncate">
                 "{transcript}"
               </div>
             )}
           </div>
 
           {/* Camera & Field Photo Identification */}
-          <div className="bg-stone-50 rounded-2xl p-4 border border-stone-200">
+          <div className="bg-emerald-50 rounded-2xl p-4 border border-emerald-200">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-bold text-stone-800 flex items-center gap-1.5">
+              <span className="text-xs font-bold text-emerald-800 flex items-center gap-1.5">
                 <Camera className="w-4 h-4 text-emerald-700" />
                 {language === 'pa' ? 'ਖੇਤ ਦੀ ਫੋਟੋ ਦਿਖਾਓ (AI ਫ਼ਸਲ ਪਛਾਣ)' : language === 'hi' ? 'खेत की फोटो से फसल पहचान' : 'AI Crop Photo Identification'}
               </span>
             </div>
 
-            <p className="text-[11px] text-stone-600 mb-3">
+            <p className="text-[11px] text-emerald-600 mb-3">
               {language === 'pa'
                 ? 'ਕੈਮਰੇ ਨਾਲ ਖੇਤ ਦਿਖਾਓ, AI ਪਰਾਲੀ ਦੀ ਕਿਸਮ ਅਤੇ ਨਮੀ ਦੀ ਪਛਾਣ ਕਰੇਗਾ'
                 : language === 'hi'
@@ -615,7 +615,7 @@ export const VoiceBotAndCamera: React.FC<VoiceBotAndCameraProps> = ({
               />
               <button
                 onClick={() => fileInputRef.current?.click()}
-                className="flex-1 bg-white hover:bg-stone-100 text-stone-800 font-bold text-xs py-2 px-3 rounded-xl border border-stone-300 flex items-center justify-center gap-1.5 shadow-2xs transition active:scale-95 cursor-pointer"
+                className="flex-1 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-bold text-xs py-2 px-3 rounded-xl border border-emerald-300 flex items-center justify-center gap-1.5 shadow-2xs transition active:scale-95 cursor-pointer"
               >
                 <Camera className="w-3.5 h-3.5 text-emerald-700" />
                 <span>{language === 'pa' ? 'ਕੈਮਰਾ / ਫੋਟੋ ਅਪਲੋਡ' : language === 'hi' ? 'कैमरा / फोटो लें' : 'Take / Upload Photo'}</span>
@@ -623,20 +623,20 @@ export const VoiceBotAndCamera: React.FC<VoiceBotAndCameraProps> = ({
             </div>
 
             {/* Quick Demo Test Field Thumbnails */}
-            <div className="mt-3 pt-2.5 border-t border-stone-200">
-              <span className="text-[10px] font-semibold text-stone-500 uppercase tracking-wider block mb-1.5">
+            <div className="mt-3 pt-2.5 border-t border-emerald-200">
+              <span className="text-[10px] font-semibold text-emerald-500 uppercase tracking-wider block mb-1.5">
                 {language === 'pa' ? 'ਜਾਂ ਟੈਸਟ ਫੋਟੋ ਚੁਣੋ:' : language === 'hi' ? 'या डेमो टेस्ट फोटो चुनें:' : 'Or test with sample field photo:'}
               </span>
               <div className="grid grid-cols-2 gap-1.5">
                 <button
                   onClick={() => handlePresetPhoto('paddy_non_basmati', 'Paddy PR-126 Stubble')}
-                  className="text-[11px] font-medium bg-amber-100/70 hover:bg-amber-200/80 text-amber-950 p-1.5 rounded-lg border border-amber-300 text-left transition truncate cursor-pointer"
+                  className="text-[11px] font-medium bg-emerald-100/70 hover:bg-emerald-200/80 text-emerald-950 p-1.5 rounded-lg border border-emerald-300 text-left transition truncate cursor-pointer"
                 >
                   🌾 Paddy Straw (PR-126)
                 </button>
                 <button
                   onClick={() => handlePresetPhoto('paddy_basmati', 'Basmati 1121 Stubble')}
-                  className="text-[11px] font-medium bg-amber-100/70 hover:bg-amber-200/80 text-amber-950 p-1.5 rounded-lg border border-amber-300 text-left transition truncate cursor-pointer"
+                  className="text-[11px] font-medium bg-emerald-100/70 hover:bg-emerald-200/80 text-emerald-950 p-1.5 rounded-lg border border-emerald-300 text-left transition truncate cursor-pointer"
                 >
                   🌾 Basmati 1121 Straw
                 </button>

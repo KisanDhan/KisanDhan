@@ -537,13 +537,13 @@ export const MultimodalCameraDashboard: React.FC<MultimodalCameraDashboardProps>
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-[#131314] flex flex-col justify-between text-white animate-fadeIn overflow-hidden">
+    <div className="fixed inset-0 z-50 bg-[#052e16] flex flex-col justify-between text-emerald-50 animate-fadeIn overflow-hidden">
       {/* Top Header Bar */}
-      <div className="px-4 py-3 flex items-center justify-between border-b border-[#282a2c] bg-[#131314]/95 shrink-0">
+      <div className="px-4 py-3 flex items-center justify-between border-b border-[#047857] bg-[#052e16]/95 shrink-0">
         <div className="flex items-center gap-2">
           <button
             onClick={handleBack}
-            className="flex items-center gap-1 bg-[#282a2c] hover:bg-[#3c4043] text-stone-200 px-2.5 py-1.5 rounded-xl text-xs font-bold transition active:scale-95 cursor-pointer mr-0.5"
+            className="flex items-center gap-1 bg-[#047857] hover:bg-[#10b981] text-emerald-200 px-2.5 py-1.5 rounded-xl text-xs font-bold transition active:scale-95 cursor-pointer mr-0.5"
             title={i18n.backBtn}
           >
             <ArrowLeft className="w-4 h-4 text-emerald-400" />
@@ -551,16 +551,16 @@ export const MultimodalCameraDashboard: React.FC<MultimodalCameraDashboardProps>
           </button>
 
           <div className="w-8 h-8 rounded-xl bg-emerald-600 flex items-center justify-center shrink-0">
-            <Camera className="w-4 h-4 text-white" />
+            <Camera className="w-4 h-4 text-emerald-50" />
           </div>
           <div>
-            <h2 className="text-sm font-bold text-white flex items-center gap-1.5">
+            <h2 className="text-sm font-bold text-emerald-50 flex items-center gap-1.5">
               <span>{i18n.title}</span>
               {(cameraStatus === 'live' || streamRef.current) && (
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
               )}
             </h2>
-            <p className="text-[10px] text-stone-400">
+            <p className="text-[10px] text-emerald-400">
               {cameraStatus === 'live' || streamRef.current
                 ? `${i18n.live} (${facingMode === 'environment' ? 'Rear' : 'Front'})`
                 : cameraStatus === 'requesting'
@@ -574,7 +574,7 @@ export const MultimodalCameraDashboard: React.FC<MultimodalCameraDashboardProps>
           {(cameraStatus === 'live' || streamRef.current) && (
             <button
               onClick={toggleFacingMode}
-              className="p-2 rounded-xl bg-[#282a2c] hover:bg-[#3c4043] text-stone-300 cursor-pointer"
+              className="p-2 rounded-xl bg-[#047857] hover:bg-[#10b981] text-emerald-300 cursor-pointer"
               title={i18n.switchCam}
             >
               <FlipHorizontal className="w-4 h-4" />
@@ -586,7 +586,7 @@ export const MultimodalCameraDashboard: React.FC<MultimodalCameraDashboardProps>
               stopCamera();
               onClose();
             }}
-            className="p-2 rounded-xl bg-[#282a2c] hover:bg-[#3c4043] text-stone-300 cursor-pointer"
+            className="p-2 rounded-xl bg-[#047857] hover:bg-[#10b981] text-emerald-300 cursor-pointer"
           >
             <X className="w-4 h-4" />
           </button>
@@ -598,7 +598,7 @@ export const MultimodalCameraDashboard: React.FC<MultimodalCameraDashboardProps>
         {activeTab === 'camera' && (
           <div className="w-full max-w-sm flex flex-col items-center">
             {/* Viewfinder Screen */}
-            <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden bg-black border-2 border-emerald-500/70 shadow-2xl flex items-center justify-center">
+            <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden bg-emerald-950 border-2 border-emerald-500/70 shadow-2xl flex items-center justify-center">
               <video
                 ref={(el) => {
                   videoRef.current = el;
@@ -622,36 +622,36 @@ export const MultimodalCameraDashboard: React.FC<MultimodalCameraDashboardProps>
               />
 
               {!streamRef.current && cameraStatus !== 'live' && (
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-[#1e1f20]/95 z-10">
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-[#065f46]/95 z-10">
                   {cameraStatus === 'requesting' ? (
                     <>
                       <RefreshCw className="w-10 h-10 animate-spin text-emerald-400 mb-3" />
-                      <p className="text-xs font-bold text-white">{i18n.connecting}</p>
-                      <p className="text-[11px] text-stone-400 mt-1">
+                      <p className="text-xs font-bold text-emerald-50">{i18n.connecting}</p>
+                      <p className="text-[11px] text-emerald-400 mt-1">
                         Please grant camera permissions when prompted.
                       </p>
                     </>
                   ) : (
                     <>
-                      <VideoOff className="w-10 h-10 text-stone-500 mb-2" />
-                      <p className="text-xs font-bold text-white mb-1">
+                      <VideoOff className="w-10 h-10 text-emerald-500 mb-2" />
+                      <p className="text-xs font-bold text-emerald-50 mb-1">
                         {cameraErrorMsg || 'Camera preview unavailable'}
                       </p>
-                      <p className="text-[11px] text-stone-400 mb-4">
+                      <p className="text-[11px] text-emerald-400 mb-4">
                         You can take a photo with your device camera or pick a file.
                       </p>
 
                       <div className="flex gap-2">
                         <button
                           onClick={() => startCamera()}
-                          className="bg-[#282a2c] hover:bg-[#3c4043] text-white text-xs px-3 py-1.5 rounded-xl flex items-center gap-1 cursor-pointer"
+                          className="bg-[#047857] hover:bg-[#10b981] text-emerald-50 text-xs px-3 py-1.5 rounded-xl flex items-center gap-1 cursor-pointer"
                         >
                           <RefreshCw className="w-3.5 h-3.5" />
                           <span>{i18n.retryCamera}</span>
                         </button>
                         <button
                           onClick={() => fileInputRef.current?.click()}
-                          className="bg-emerald-600 hover:bg-emerald-500 text-stone-950 font-bold text-xs px-3 py-1.5 rounded-xl flex items-center gap-1 cursor-pointer"
+                          className="bg-emerald-600 hover:bg-emerald-500 text-emerald-950 font-bold text-xs px-3 py-1.5 rounded-xl flex items-center gap-1 cursor-pointer"
                         >
                           <Upload className="w-3.5 h-3.5" />
                           <span>{i18n.choosePhoto}</span>
@@ -663,12 +663,12 @@ export const MultimodalCameraDashboard: React.FC<MultimodalCameraDashboardProps>
               )}
 
               {/* Viewfinder Reticle */}
-              <div className="absolute inset-4 pointer-events-none border border-white/20 rounded-2xl flex flex-col justify-between p-2 z-10">
+              <div className="absolute inset-4 pointer-events-none border border-emerald-50/20 rounded-2xl flex flex-col justify-between p-2 z-10">
                 <div className="flex justify-between">
                   <span className="w-4 h-4 border-t-2 border-l-2 border-emerald-400"></span>
                   <span className="w-4 h-4 border-t-2 border-r-2 border-emerald-400"></span>
                 </div>
-                <div className="text-center text-[10px] font-mono bg-black/60 text-emerald-300 px-2 py-0.5 rounded-full mx-auto backdrop-blur-xs">
+                <div className="text-center text-[10px] font-mono bg-emerald-950/60 text-emerald-300 px-2 py-0.5 rounded-full mx-auto backdrop-blur-xs">
                   {i18n.reticle}
                 </div>
                 <div className="flex justify-between">
@@ -681,10 +681,10 @@ export const MultimodalCameraDashboard: React.FC<MultimodalCameraDashboardProps>
               <div className="absolute bottom-3 inset-x-0 flex items-center justify-center gap-3 z-20 pointer-events-auto">
                 <button
                   onClick={capturePhoto}
-                  className="w-14 h-14 rounded-full bg-white/90 hover:bg-white text-stone-950 p-1 flex items-center justify-center shadow-2xl active:scale-95 transition cursor-pointer ring-4 ring-emerald-500/50"
+                  className="w-14 h-14 rounded-full bg-emerald-50/90 hover:bg-emerald-50 text-emerald-950 p-1 flex items-center justify-center shadow-2xl active:scale-95 transition cursor-pointer ring-4 ring-emerald-500/50"
                   title={i18n.takePhoto}
                 >
-                  <div className="w-11 h-11 rounded-full border-2 border-stone-950 flex items-center justify-center bg-emerald-500 text-stone-950">
+                  <div className="w-11 h-11 rounded-full border-2 border-emerald-950 flex items-center justify-center bg-emerald-500 text-emerald-950">
                     <Aperture className="w-6 h-6" />
                   </div>
                 </button>
@@ -693,13 +693,13 @@ export const MultimodalCameraDashboard: React.FC<MultimodalCameraDashboardProps>
 
             {/* Quick Farm Samples */}
             <div className="mt-3 flex items-center gap-1.5 overflow-x-auto w-full pb-1 text-xs">
-              <span className="text-[10px] text-stone-500 shrink-0">{i18n.demoSamples}</span>
+              <span className="text-[10px] text-emerald-500 shrink-0">{i18n.demoSamples}</span>
               <button
                 onClick={() => {
                   setCapturedImage(null);
                   processImageWithGemini('sample_paddy', 'paddy_non_basmati');
                 }}
-                className="bg-[#1e1f20] hover:bg-[#282a2c] text-stone-200 px-2.5 py-1 rounded-lg border border-[#2e3134] whitespace-nowrap cursor-pointer"
+                className="bg-[#065f46] hover:bg-[#047857] text-emerald-200 px-2.5 py-1 rounded-lg border border-[#059669] whitespace-nowrap cursor-pointer"
               >
                 🌾 Paddy PR-126
               </button>
@@ -708,7 +708,7 @@ export const MultimodalCameraDashboard: React.FC<MultimodalCameraDashboardProps>
                   setCapturedImage(null);
                   processImageWithGemini('sample_basmati', 'paddy_basmati');
                 }}
-                className="bg-[#1e1f20] hover:bg-[#282a2c] text-stone-200 px-2.5 py-1 rounded-lg border border-[#2e3134] whitespace-nowrap cursor-pointer"
+                className="bg-[#065f46] hover:bg-[#047857] text-emerald-200 px-2.5 py-1 rounded-lg border border-[#059669] whitespace-nowrap cursor-pointer"
               >
                 🌾 Basmati Straw
               </button>
@@ -717,7 +717,7 @@ export const MultimodalCameraDashboard: React.FC<MultimodalCameraDashboardProps>
                   setCapturedImage(null);
                   processImageWithGemini('sample_wheat', 'wheat');
                 }}
-                className="bg-[#1e1f20] hover:bg-[#282a2c] text-stone-200 px-2.5 py-1 rounded-lg border border-[#2e3134] whitespace-nowrap cursor-pointer"
+                className="bg-[#065f46] hover:bg-[#047857] text-emerald-200 px-2.5 py-1 rounded-lg border border-[#059669] whitespace-nowrap cursor-pointer"
               >
                 🌾 Wheat Turi
               </button>
@@ -731,34 +731,34 @@ export const MultimodalCameraDashboard: React.FC<MultimodalCameraDashboardProps>
             {isAnalyzing ? (
               <div className="text-center py-10">
                 <RefreshCw className="w-10 h-10 animate-spin text-emerald-400 mx-auto mb-3" />
-                <p className="text-xs font-bold text-white">{i18n.analyzing}</p>
-                <p className="text-[11px] text-stone-400 mt-1">{i18n.estimatingYield}</p>
+                <p className="text-xs font-bold text-emerald-50">{i18n.analyzing}</p>
+                <p className="text-[11px] text-emerald-400 mt-1">{i18n.estimatingYield}</p>
               </div>
             ) : detectionResult ? (
               <div className="space-y-3 animate-fadeIn">
                 {/* CHECK: Was this a non-crop image (like a selfie or person)? */}
                 {!detectionResult.isCrop ? (
-                  <div className="bg-amber-950/60 border-2 border-amber-500/80 rounded-2xl p-4 text-white space-y-3">
-                    <div className="flex items-center gap-2.5 text-amber-400">
+                  <div className="bg-emerald-950/60 border-2 border-emerald-500/80 rounded-2xl p-4 text-emerald-50 space-y-3">
+                    <div className="flex items-center gap-2.5 text-emerald-400">
                       <ShieldAlert className="w-6 h-6 shrink-0" />
                       <div>
-                        <h3 className="text-sm font-black">{i18n.notCropHeader}</h3>
-                        <p className="text-[11px] text-amber-200/90 mt-0.5">
-                          {i18n.notCropSub} <strong className="text-white underline">{detectionResult.detectedSubject}</strong>
+                        <h3 className="text-sm font-emerald-950">{i18n.notCropHeader}</h3>
+                        <p className="text-[11px] text-emerald-200/90 mt-0.5">
+                          {i18n.notCropSub} <strong className="text-emerald-50 underline">{detectionResult.detectedSubject}</strong>
                         </p>
                       </div>
                     </div>
 
-                    <p className="text-xs text-stone-300 leading-relaxed bg-[#131314]/80 p-3 rounded-xl border border-amber-500/30">
+                    <p className="text-xs text-emerald-300 leading-relaxed bg-[#052e16]/80 p-3 rounded-xl border border-emerald-500/30">
                       {detectionResult.errorMessage || i18n.notCropGuide}
                     </p>
 
                     {/* Audio playback of warning */}
-                    <div className="flex items-center justify-between text-xs text-stone-400 pt-1">
+                    <div className="flex items-center justify-between text-xs text-emerald-400 pt-1">
                       <span className="italic text-[11px]">"{voiceReply || detectionResult.spokenReply}"</span>
                       <button
                         onClick={() => speak(voiceReply || detectionResult.spokenReply)}
-                        className="p-1.5 rounded-lg bg-[#282a2c] hover:bg-[#3c4043] text-amber-400 cursor-pointer shrink-0 ml-2"
+                        className="p-1.5 rounded-lg bg-[#047857] hover:bg-[#10b981] text-emerald-400 cursor-pointer shrink-0 ml-2"
                         title="Replay Voice"
                       >
                         <Volume2 className="w-4 h-4" />
@@ -770,7 +770,7 @@ export const MultimodalCameraDashboard: React.FC<MultimodalCameraDashboardProps>
                         setActiveTab('camera');
                         startCamera();
                       }}
-                      className="w-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-black py-2.5 rounded-xl text-xs flex items-center justify-center gap-1.5 transition active:scale-95 cursor-pointer shadow-md"
+                      className="w-full bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-emerald-950 py-2.5 rounded-xl text-xs flex items-center justify-center gap-1.5 transition active:scale-95 cursor-pointer shadow-md"
                     >
                       <Camera className="w-4 h-4" />
                       <span>{i18n.tryAgain}</span>
@@ -779,38 +779,38 @@ export const MultimodalCameraDashboard: React.FC<MultimodalCameraDashboardProps>
                 ) : (
                   /* Genuine Crop Residue Verified Screen */
                   <div className="space-y-3">
-                    <div className="bg-[#1e1f20] border border-[#2e3134] p-4 rounded-2xl">
+                    <div className="bg-[#065f46] border border-[#059669] p-4 rounded-2xl">
                       <div className="flex items-center justify-between">
                         <div>
                           <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider block">
                             Crop Identified (Gemini Vision)
                           </span>
-                          <h3 className="text-lg font-black text-white mt-0.5">
+                          <h3 className="text-lg font-emerald-950 text-emerald-50 mt-0.5">
                             {detectionResult.cropName}
                           </h3>
-                          <p className="text-xs text-stone-400 mt-0.5">
+                          <p className="text-xs text-emerald-400 mt-0.5">
                             {i18n.condition} {detectionResult.condition}
                           </p>
                         </div>
 
                         <div className="text-right">
-                          <span className="text-xs font-black text-emerald-400 bg-emerald-950/80 border border-emerald-500/50 px-2 py-0.5 rounded-full">
+                          <span className="text-xs font-emerald-950 text-emerald-400 bg-emerald-950/80 border border-emerald-500/50 px-2 py-0.5 rounded-full">
                             {detectionResult.confidence}% {i18n.accuracy}
                           </span>
-                          <p className="text-[10px] text-stone-400 mt-1">
+                          <p className="text-[10px] text-emerald-400 mt-1">
                             {acres} Acres • {detectionResult.calculation?.stubbleQuantityQuintals} qtl
                           </p>
                         </div>
                       </div>
 
                       {/* Audio reply banner */}
-                      <div className="mt-3 pt-2.5 border-t border-[#2e3134] flex items-center justify-between text-xs text-stone-300">
+                      <div className="mt-3 pt-2.5 border-t border-[#059669] flex items-center justify-between text-xs text-emerald-300">
                         <p className="text-[11px] leading-relaxed italic pr-2">
                           "{voiceReply || detectionResult.spokenReply}"
                         </p>
                         <button
                           onClick={() => speak(voiceReply || detectionResult.spokenReply)}
-                          className="p-1.5 rounded-lg bg-[#282a2c] hover:bg-[#3c4043] text-emerald-400 cursor-pointer shrink-0"
+                          className="p-1.5 rounded-lg bg-[#047857] hover:bg-[#10b981] text-emerald-400 cursor-pointer shrink-0"
                           title="Replay Voice"
                         >
                           <Volume2 className="w-4 h-4" />
@@ -821,11 +821,11 @@ export const MultimodalCameraDashboard: React.FC<MultimodalCameraDashboardProps>
                     {/* Financial Comparison Box (Sell vs Burn) */}
                     {detectionResult.calculation && detectionResult.topBuyer && (
                       <div className="grid grid-cols-2 gap-2 text-xs">
-                        <div className="bg-emerald-950/70 border border-emerald-500/80 rounded-2xl p-3 text-white">
+                        <div className="bg-emerald-950/70 border border-emerald-500/80 rounded-2xl p-3 text-emerald-50">
                           <span className="text-[10px] font-bold text-emerald-400 uppercase block">
                             {i18n.sellCardTitle}
                           </span>
-                          <div className="text-xl font-black text-emerald-300 my-0.5">
+                          <div className="text-xl font-emerald-950 text-emerald-300 my-0.5">
                             +₹{detectionResult.calculation.netIncome.toLocaleString('en-IN')}
                           </div>
                           <p className="text-[10px] text-emerald-200">
@@ -833,14 +833,14 @@ export const MultimodalCameraDashboard: React.FC<MultimodalCameraDashboardProps>
                           </p>
                         </div>
 
-                        <div className="bg-rose-950/70 border border-rose-600/70 rounded-2xl p-3 text-white">
-                          <span className="text-[10px] font-bold text-rose-400 uppercase block">
+                        <div className="bg-emerald-950/70 border border-emerald-600/70 rounded-2xl p-3 text-emerald-50">
+                          <span className="text-[10px] font-bold text-emerald-400 uppercase block">
                             {i18n.burnCardTitle}
                           </span>
-                          <div className="text-xl font-black text-rose-400 my-0.5">
+                          <div className="text-xl font-emerald-950 text-emerald-400 my-0.5">
                             {i18n.zeroRupees}
                           </div>
-                          <p className="text-[10px] text-rose-300">
+                          <p className="text-[10px] text-emerald-300">
                             -₹{detectionResult.calculation.burningFine.toLocaleString('en-IN')} {i18n.ngtFine}
                           </p>
                         </div>
@@ -855,7 +855,7 @@ export const MultimodalCameraDashboard: React.FC<MultimodalCameraDashboardProps>
                           onClose();
                           onBookPickup(detectionResult.topBuyer!);
                         }}
-                        className="w-full bg-emerald-600 hover:bg-emerald-500 text-stone-950 font-black py-3 rounded-2xl text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg transition active:scale-95 cursor-pointer"
+                        className="w-full bg-emerald-600 hover:bg-emerald-500 text-emerald-950 font-emerald-950 py-3 rounded-2xl text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg transition active:scale-95 cursor-pointer"
                       >
                         <CalendarCheck className="w-4 h-4" />
                         <span>{i18n.bookPickup}</span>
@@ -867,7 +867,7 @@ export const MultimodalCameraDashboard: React.FC<MultimodalCameraDashboardProps>
                         setActiveTab('camera');
                         startCamera();
                       }}
-                      className="w-full bg-[#1e1f20] hover:bg-[#282a2c] text-stone-300 py-2 rounded-xl text-xs font-bold border border-[#2e3134] flex items-center justify-center gap-1.5 transition cursor-pointer"
+                      className="w-full bg-[#065f46] hover:bg-[#047857] text-emerald-300 py-2 rounded-xl text-xs font-bold border border-[#059669] flex items-center justify-center gap-1.5 transition cursor-pointer"
                     >
                       <RefreshCw className="w-3.5 h-3.5" />
                       <span>{i18n.rescan}</span>
@@ -891,11 +891,11 @@ export const MultimodalCameraDashboard: React.FC<MultimodalCameraDashboardProps>
       />
 
       {/* Bottom Bar: Action Shutter, Push to Talk, Photo Upload */}
-      <div className="p-3 bg-[#131314]/95 border-t border-[#282a2c] shrink-0">
+      <div className="p-3 bg-[#052e16]/95 border-t border-[#047857] shrink-0">
         <div className="max-w-sm mx-auto flex items-center justify-between gap-2">
           <button
             onClick={() => fileInputRef.current?.click()}
-            className="flex-1 bg-[#1e1f20] hover:bg-[#282a2c] border border-[#2e3134] text-stone-300 py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 active:scale-95 transition cursor-pointer"
+            className="flex-1 bg-[#065f46] hover:bg-[#047857] border border-[#059669] text-emerald-300 py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 active:scale-95 transition cursor-pointer"
           >
             <Upload className="w-4 h-4 text-emerald-400" />
             <span>{i18n.choosePhoto}</span>
@@ -905,11 +905,11 @@ export const MultimodalCameraDashboard: React.FC<MultimodalCameraDashboardProps>
             onClick={toggleSpeechRecognition}
             className={`flex-1 py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 active:scale-95 transition cursor-pointer ${
               isListening
-                ? 'bg-red-600 text-white animate-pulse'
-                : 'bg-emerald-600 hover:bg-emerald-500 text-stone-950 font-black'
+                ? 'bg-emerald-600 text-emerald-50 animate-pulse'
+                : 'bg-emerald-600 hover:bg-emerald-500 text-emerald-950 font-emerald-950'
             }`}
           >
-            {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4 fill-stone-950" />}
+            {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4 fill-emerald-950" />}
             <span>{isListening ? i18n.listening : i18n.holdToSpeak}</span>
           </button>
         </div>
