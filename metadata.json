@@ -1,0 +1,6 @@
+{
+  "name": "KisanDhan (Beta) | Stubble-to-Income Platform",
+  "description": "KisanDhan (Beta) - Voice-first AgriTech platform that pays farmers for crop stubble instead of burning. Featuring AI crop identification, real-time residue calculation, ranked buyer matchmaking, and baler pickup scheduling.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
