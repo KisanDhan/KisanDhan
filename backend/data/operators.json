@@ -1,0 +1,7 @@
+[
+  {"id": "op1", "name": "Baler Hub 1 (demo)", "base_lat": 30.9010, "base_lng": 75.8573, "capacity_q_per_day": 300, "busy_dates": [], "demo": true},
+  {"id": "op2", "name": "Baler Hub 2 (demo)", "base_lat": 30.7894, "base_lng": 75.4764, "capacity_q_per_day": 250, "busy_dates": [], "demo": true},
+  {"id": "op3", "name": "Baler Hub 3 (demo)", "base_lat": 30.8500, "base_lng": 76.0000, "capacity_q_per_day": 350, "busy_dates": [], "demo": true},
+  {"id": "op4", "name": "Baler Hub 4 (demo)", "base_lat": 30.6967, "base_lng": 76.2167, "capacity_q_per_day": 200, "busy_dates": [], "demo": true},
+  {"id": "op5", "name": "Baler Hub 5 (demo)", "base_lat": 30.8375, "base_lng": 76.1917, "capacity_q_per_day": 280, "busy_dates": [], "demo": true}
+]

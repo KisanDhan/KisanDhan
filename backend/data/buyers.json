@@ -1,0 +1,10 @@
+[
+  {"id": "buyer1", "name": "Paper mill 1 (demo)", "type": "paper_mill", "price_per_q": 180, "lat": 30.9100, "lng": 75.9000, "district": "Ludhiana", "demo": true},
+  {"id": "buyer2", "name": "Paper mill 2 (demo)", "type": "paper_mill", "price_per_q": 175, "lat": 30.8000, "lng": 75.5000, "district": "Ludhiana", "demo": true},
+  {"id": "buyer3", "name": "Biomass plant 1 (demo)", "type": "biomass", "price_per_q": 190, "lat": 30.7500, "lng": 76.1000, "district": "Ludhiana", "demo": true},
+  {"id": "buyer4", "name": "Biomass plant 2 (demo)", "type": "biomass", "price_per_q": 185, "lat": 30.6500, "lng": 75.6500, "district": "Ludhiana", "demo": true},
+  {"id": "buyer5", "name": "Fodder supplier 1 (demo)", "type": "fodder", "price_per_q": 160, "lat": 30.9500, "lng": 75.7500, "district": "Ludhiana", "demo": true},
+  {"id": "buyer6", "name": "Fodder supplier 2 (demo)", "type": "fodder", "price_per_q": 155, "lat": 30.8200, "lng": 76.2500, "district": "Ludhiana", "demo": true},
+  {"id": "buyer7", "name": "Paper mill 3 (demo)", "type": "paper_mill", "price_per_q": 170, "lat": 30.7000, "lng": 76.0000, "district": "Ludhiana", "demo": true},
+  {"id": "buyer8", "name": "Biomass plant 3 (demo)", "type": "biomass", "price_per_q": 150, "lat": 30.8700, "lng": 75.6000, "district": "Ludhiana", "demo": true}
+]

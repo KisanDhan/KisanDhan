@@ -1,0 +1,8 @@
+[
+  {"lat": 30.92, "lon": 75.85, "confidence": "high", "bright_ti4": 342.5, "frp": 24.5, "acq_date": "2026-10-17", "acq_time": "0542", "satellite": "N", "sample": true},
+  {"lat": 30.78, "lon": 75.48, "confidence": "nominal", "bright_ti4": 335.2, "frp": 18.0, "acq_date": "2026-10-17", "acq_time": "0542", "satellite": "N", "sample": true},
+  {"lat": 30.85, "lon": 76.00, "confidence": "high", "bright_ti4": 351.0, "frp": 32.1, "acq_date": "2026-10-17", "acq_time": "0600", "satellite": "N", "sample": true},
+  {"lat": 30.65, "lon": 75.60, "confidence": "nominal", "bright_ti4": 329.0, "frp": 14.2, "acq_date": "2026-10-17", "acq_time": "0600", "satellite": "1", "sample": true},
+  {"lat": 30.70, "lon": 76.22, "confidence": "high", "bright_ti4": 346.0, "frp": 26.7, "acq_date": "2026-10-17", "acq_time": "0618", "satellite": "N", "sample": true},
+  {"lat": 30.88, "lon": 75.83, "confidence": "nominal", "bright_ti4": 338.0, "frp": 19.8, "acq_date": "2026-10-17", "acq_time": "0618", "satellite": "N", "sample": true}
+]

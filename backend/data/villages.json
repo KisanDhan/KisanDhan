@@ -1,0 +1,16 @@
+[
+  {"name": "Machhiwara", "lat": 30.9166, "lng": 76.2000, "district": "Ludhiana", "state": "Punjab", "demo": true},
+  {"name": "Jagraon", "lat": 30.7894, "lng": 75.4764, "district": "Ludhiana", "state": "Punjab", "demo": true},
+  {"name": "Sahnewal", "lat": 30.8500, "lng": 76.0000, "district": "Ludhiana", "state": "Punjab", "demo": true},
+  {"name": "Raikot", "lat": 30.6497, "lng": 75.6036, "district": "Ludhiana", "state": "Punjab", "demo": true},
+  {"name": "Khanna", "lat": 30.6967, "lng": 76.2167, "district": "Ludhiana", "state": "Punjab", "demo": true},
+  {"name": "Samrala", "lat": 30.8375, "lng": 76.1917, "district": "Ludhiana", "state": "Punjab", "demo": true},
+  {"name": "Mullanpur Dakha", "lat": 30.8000, "lng": 75.9500, "district": "Ludhiana", "state": "Punjab", "demo": true},
+  {"name": "Payal", "lat": 30.7500, "lng": 76.0000, "district": "Ludhiana", "state": "Punjab", "demo": true},
+  {"name": "Doraha", "lat": 30.8000, "lng": 76.0333, "district": "Ludhiana", "state": "Punjab", "demo": true},
+  {"name": "Sudhar", "lat": 30.8700, "lng": 75.9200, "district": "Ludhiana", "state": "Punjab", "demo": true},
+  {"name": "Gill", "lat": 30.8800, "lng": 75.8300, "district": "Ludhiana", "state": "Punjab", "demo": true},
+  {"name": "Hambran", "lat": 30.9200, "lng": 75.7900, "district": "Ludhiana", "state": "Punjab", "demo": true},
+  {"name": "Sidhwan Bet", "lat": 30.9500, "lng": 75.6500, "district": "Ludhiana", "state": "Punjab", "demo": true},
+  {"name": "Hathur", "lat": 30.8100, "lng": 75.8800, "district": "Ludhiana", "state": "Punjab", "demo": true}
+]

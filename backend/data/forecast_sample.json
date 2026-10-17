@@ -1,0 +1,16 @@
+{
+  "days": [
+    {"date": "2026-10-17", "rain_mm": 0,   "rain_prob": 10, "blocked": false},
+    {"date": "2026-10-18", "rain_mm": 8.5, "rain_prob": 85, "blocked": true},
+    {"date": "2026-10-19", "rain_mm": 0,   "rain_prob": 15, "blocked": true},
+    {"date": "2026-10-20", "rain_mm": 0,   "rain_prob": 5,  "blocked": false},
+    {"date": "2026-10-21", "rain_mm": 0,   "rain_prob": 10, "blocked": false},
+    {"date": "2026-10-22", "rain_mm": 0,   "rain_prob": 8,  "blocked": false},
+    {"date": "2026-10-23", "rain_mm": 0,   "rain_prob": 12, "blocked": false},
+    {"date": "2026-10-24", "rain_mm": 0,   "rain_prob": 5,  "blocked": false},
+    {"date": "2026-10-25", "rain_mm": 0,   "rain_prob": 10, "blocked": false},
+    {"date": "2026-10-26", "rain_mm": 0,   "rain_prob": 15, "blocked": false}
+  ],
+  "source": "sample",
+  "note": "Sample data - includes one rain day on day 2"
+}

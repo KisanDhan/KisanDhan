@@ -1,0 +1,6 @@
+[
+  {"id": "store1", "name": "Ludhiana Agri Depot (demo)", "lat": 30.9010, "lng": 75.8573, "capacity_tonnes": 500, "demo": true},
+  {"id": "store2", "name": "Jagraon Storage Yard (demo)", "lat": 30.7894, "lng": 75.4764, "capacity_tonnes": 350, "demo": true},
+  {"id": "store3", "name": "Khanna Collection Point (demo)", "lat": 30.6967, "lng": 76.2167, "capacity_tonnes": 400, "demo": true},
+  {"id": "store4", "name": "Samrala Biomass Hub (demo)", "lat": 30.8375, "lng": 76.1917, "capacity_tonnes": 300, "demo": true}
+]

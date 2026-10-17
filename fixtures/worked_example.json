@@ -1,0 +1,40 @@
+{
+  "_comment": "Worked example: Gurpreet, 8 acres paddy, buyer at 25 km, Rs 180/q",
+  "input": {
+    "farmer": "Gurpreet",
+    "crop": "paddy",
+    "area_acres": 8,
+    "buyer_distance_km": 25,
+    "buyer_price_per_q": 180
+  },
+  "straw_q": 216,
+  "gross": 38880,
+  "baling": 9720,
+  "transport": 1350,
+  "net_sale": 27810,
+  "farmer_share": 8343,
+  "operator_share": 19467,
+  "incentive": 9600,
+  "farmer_net": 17943,
+  "insitu": 1600,
+  "fine": 15000,
+  "tonnes": 21.6,
+  "co2_avoided_tonnes": 31.5,
+  "pm25_avoided_kg": 216,
+  "_derivation": {
+    "straw_q": "8 * 27 = 216",
+    "gross": "216 * 180 = 38880",
+    "baling": "216 * 45 = 9720",
+    "transport": "216 * 25 * 0.25 = 1350",
+    "net_sale": "38880 - 9720 - 1350 = 27810",
+    "farmer_share": "round_half_up(27810 * 0.30) = 8343",
+    "operator_share": "27810 - 8343 = 19467",
+    "incentive": "8 * 1200 = 9600",
+    "farmer_net": "8343 + 9600 = 17943",
+    "insitu": "8 * 200 = 1600 (per-acre cost of in-situ incorporation, assumption)",
+    "fine": "8 acres > 5 => 15000",
+    "tonnes": "216 / 10 = 21.6",
+    "co2": "21.6 * 1.46 = 31.536, rounded to 31.5 tonnes",
+    "pm25": "21.6 * 10 = 216 kg"
+  }
+}

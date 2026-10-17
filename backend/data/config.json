@@ -1,0 +1,63 @@
+{
+  "straw_q_per_acre": {
+    "paddy": 27,
+    "wheat": 18,
+    "source": "IARI field trials, Punjab 2022-23 *verify before presenting*"
+  },
+  "baling_cost_per_q": {
+    "value": 45,
+    "range_min": 40,
+    "range_max": 50,
+    "source": "Punjab CHC benchmarked rates 2024"
+  },
+  "transport_cost_per_q_km": {
+    "value": 0.25,
+    "source": "State transport subsidy schedule, assumption"
+  },
+  "farmer_share": {
+    "value": 0.30,
+    "source": "Platform policy assumption"
+  },
+  "incentive_per_acre": {
+    "value": 1200,
+    "source": "CRM scheme estimate *verify before presenting*"
+  },
+  "fines": {
+    "upto_2_acres": 2500,
+    "upto_5_acres": 5000,
+    "above_5_acres": 15000,
+    "source": "NGT / CAQM orders *verify before presenting*"
+  },
+  "insitu_rent_per_acre": {
+    "value": 1000,
+    "source": "Assumption: typical rotavator rental"
+  },
+  "rain_threshold_mm": {
+    "value": 2,
+    "source": "Field observation assumption"
+  },
+  "rain_prob_threshold": {
+    "value": 60,
+    "source": "Assumption"
+  },
+  "rain_buffer_days": {
+    "value": 1,
+    "source": "Drying time assumption"
+  },
+  "lot_radius_km": {
+    "value": 8,
+    "source": "Operational radius assumption"
+  },
+  "lot_date_window_days": {
+    "value": 2,
+    "source": "Scheduling flexibility assumption"
+  },
+  "co2_kg_per_tonne": {
+    "value": 1460,
+    "source": "IPCC AR6 crop residue emission factor *verify before presenting*"
+  },
+  "pm25_kg_per_tonne": {
+    "value": 10,
+    "source": "TERI / SAFAR emission inventory *verify before presenting*"
+  }
+}

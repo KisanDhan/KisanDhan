@@ -1,0 +1,17 @@
+[
+  {"id": "req1",  "farmer": "Farmer A (demo)", "village": "Machhiwara", "lat": 30.9166, "lng": 76.2000, "crop": "paddy", "area_acres": 6,  "harvest_date": "2026-10-18", "sowing_deadline": "2026-10-30"},
+  {"id": "req2",  "farmer": "Farmer B (demo)", "village": "Jagraon",     "lat": 30.7894, "lng": 75.4764, "crop": "paddy", "area_acres": 10, "harvest_date": "2026-10-17", "sowing_deadline": "2026-10-29"},
+  {"id": "req3",  "farmer": "Farmer C (demo)", "village": "Sahnewal",    "lat": 30.8500, "lng": 76.0000, "crop": "paddy", "area_acres": 4,  "harvest_date": "2026-10-19", "sowing_deadline": "2026-10-31"},
+  {"id": "req4",  "farmer": "Farmer D (demo)", "village": "Raikot",      "lat": 30.6497, "lng": 75.6036, "crop": "paddy", "area_acres": 8,  "harvest_date": "2026-10-18", "sowing_deadline": "2026-10-30"},
+  {"id": "req5",  "farmer": "Farmer E (demo)", "village": "Khanna",      "lat": 30.6967, "lng": 76.2167, "crop": "paddy", "area_acres": 12, "harvest_date": "2026-10-20", "sowing_deadline": "2026-11-01"},
+  {"id": "req6",  "farmer": "Farmer F (demo)", "village": "Samrala",     "lat": 30.8375, "lng": 76.1917, "crop": "paddy", "area_acres": 5,  "harvest_date": "2026-10-17", "sowing_deadline": "2026-10-29"},
+  {"id": "req7",  "farmer": "Farmer G (demo)", "village": "Mullanpur Dakha","lat": 30.8000, "lng": 75.9500, "crop": "paddy", "area_acres": 7, "harvest_date": "2026-10-19", "sowing_deadline": "2026-10-31"},
+  {"id": "req8",  "farmer": "Farmer H (demo)", "village": "Payal",       "lat": 30.7500, "lng": 76.0000, "crop": "paddy", "area_acres": 9,  "harvest_date": "2026-10-18", "sowing_deadline": "2026-10-30"},
+  {"id": "req9",  "farmer": "Farmer I (demo)", "village": "Doraha",      "lat": 30.8000, "lng": 76.0333, "crop": "paddy", "area_acres": 3,  "harvest_date": "2026-10-20", "sowing_deadline": "2026-11-01"},
+  {"id": "req10", "farmer": "Farmer J (demo)", "village": "Sudhar",      "lat": 30.8700, "lng": 75.9200, "crop": "paddy", "area_acres": 11, "harvest_date": "2026-10-17", "sowing_deadline": "2026-10-29"},
+  {"id": "req11", "farmer": "Farmer K (demo)", "village": "Gill",        "lat": 30.8800, "lng": 75.8300, "crop": "paddy", "area_acres": 6,  "harvest_date": "2026-10-19", "sowing_deadline": "2026-10-31"},
+  {"id": "req12", "farmer": "Farmer L (demo)", "village": "Hambran",     "lat": 30.9200, "lng": 75.7900, "crop": "paddy", "area_acres": 8,  "harvest_date": "2026-10-18", "sowing_deadline": "2026-10-30"},
+  {"id": "req13", "farmer": "Farmer M (demo)", "village": "Sidhwan Bet", "lat": 30.9500, "lng": 75.6500, "crop": "paddy", "area_acres": 5,  "harvest_date": "2026-10-20", "sowing_deadline": "2026-11-01"},
+  {"id": "req14", "farmer": "Farmer N (demo)", "village": "Hathur",      "lat": 30.8100, "lng": 75.8800, "crop": "paddy", "area_acres": 7,  "harvest_date": "2026-10-17", "sowing_deadline": "2026-10-29"},
+  {"id": "req15", "farmer": "Farmer O (demo)", "village": "Machhiwara",  "lat": 30.9166, "lng": 76.2000, "crop": "paddy", "area_acres": 4,  "harvest_date": "2026-10-19", "sowing_deadline": "2026-10-31"}
+]
