@@ -1,0 +1,42 @@
+[
+  {
+    "id": "PB-PARALI-3766",
+    "farmerName": "Gurpreet Singh",
+    "phone": "+91 98140 82194",
+    "village": "Chhajli",
+    "district": "Sangrur",
+    "acres": 8,
+    "crop": "paddy_non_basmati",
+    "quantityQuintals": 224,
+    "buyerId": "b4",
+    "buyerName": "HAFED Mega Cattle Feed & Fodder Bank",
+    "scheduledDate": "2026-10-19",
+    "timeSlot": "Morning (07:00 - 11:00)",
+    "machineryType": "Round Baler + Trolley",
+    "status": "Confirmed",
+    "netPaymentExpected": 52192,
+    "operatorName": "Harjit Singh (Kisan Baler Hub)",
+    "operatorPhone": "+91 98721 34910",
+    "createdAt": "2026-10-17T08:57:31.283Z"
+  },
+  {
+    "id": "PB-PARALI-8921",
+    "farmerName": "Gurpreet Singh",
+    "phone": "+91 98140 82194",
+    "village": "Chhajli",
+    "district": "Sangrur",
+    "acres": 8,
+    "crop": "paddy_non_basmati",
+    "quantityQuintals": 200,
+    "buyerId": "b1",
+    "buyerName": "Punjab Biomass Power Plant Ltd.",
+    "scheduledDate": "2026-10-19",
+    "timeSlot": "Morning (07:00 - 11:00)",
+    "machineryType": "Round Baler + Trolley",
+    "status": "Confirmed",
+    "netPaymentExpected": 44000,
+    "operatorName": "Harjit Singh (Kisan Baler Hub)",
+    "operatorPhone": "+91 98721 34910",
+    "createdAt": "2026-10-17T08:55:28.155Z"
+  }
+]
